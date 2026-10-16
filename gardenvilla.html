@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Garden Villa - ONDA Resorts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#ffdad6",
+          "primary": "#c5caa8",
+          "on-primary-fixed": "#191d08",
+          "tertiary-fixed-dim": "#cec6b5",
+          "surface-variant": "#333627",
+          "tertiary-fixed": "#ebe2d0",
+          "on-secondary": "#392f19",
+          "on-tertiary-fixed-variant": "#4b463a",
+          "surface-container-low": "#1a1d0f",
+          "secondary": "#d6c5a5",
+          "inverse-primary": "#5c6145",
+          "tertiary": "#cec6b5",
+          "surface-dim": "#121508",
+          "secondary-fixed": "#f2e0bf",
+          "error-container": "#93000a",
+          "on-surface": "#e2e4ce",
+          "primary-fixed": "#e1e6c2",
+          "primary-container": "#454a30",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#51452d",
+          "on-primary-container": "#b4b998",
+          "outline-variant": "#47473e",
+          "secondary-fixed-dim": "#d6c5a5",
+          "on-tertiary-container": "#bdb5a5",
+          "on-secondary-fixed": "#231a06",
+          "surface": "#121508",
+          "surface-container-high": "#282b1d",
+          "secondary-container": "#53482f",
+          "on-error": "#690005",
+          "on-surface-variant": "#c8c7bb",
+          "surface-container": "#1e2113",
+          "surface-container-highest": "#333627",
+          "background": "#121508",
+          "surface-bright": "#383b2b",
+          "surface-container-lowest": "#0d0f04",
+          "inverse-surface": "#e2e4ce",
+          "on-tertiary-fixed": "#1f1b11",
+          "on-secondary-container": "#c7b797",
+          "surface-tint": "#c5caa8",
+          "on-primary": "#2e331b",
+          "inverse-on-surface": "#2f3223",
+          "outline": "#919186",
+          "primary-fixed-dim": "#c5caa8",
+          "on-primary-fixed-variant": "#44492f",
+          "on-background": "#e2e4ce",
+          "on-tertiary": "#353025",
+          "tertiary-container": "#4c473a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin-tablet": "3rem",
+          "gutter-desktop": "2.5rem",
+          "margin-desktop": "5rem",
+          "space-xl": "3.5rem",
+          "space-lg": "2.25rem",
+          "margin": "1.5rem",
+          "space-xs": "0.375rem",
+          "gutter": "1.5rem",
+          "space-sm": "0.75rem",
+          "space-md": "1.25rem",
+          "container-max": "1440px",
+          "section-gap": "120px",
+          "margin-mobile": "20px"
+        },
+        "fontFamily": {
+          "display-hero-mobile": ["Noto Serif"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Noto Serif"],
+          "display-hero": ["Noto Serif"],
+          "headline-md": ["Noto Serif"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Noto Serif"],
+          "label-caps": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Noto Serif"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "headline-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+          "display-hero": ["64px", { "lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+          "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+          "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400" }],
+          "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+        }
+      },
+    },
+  }
+</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined[data-weight="fill"] {
+      font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+    
+    /* Custom scrollbar for webkit */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #121508; }
+    ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #454a30; }
+    
+    .glass-panel {
+        background: rgba(30, 33, 19, 0.75);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(71, 71, 62, 0.35);
+    }
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* --- Staggered Menu CSS Implementation (Mobile) --- */
+    .staggered-menu-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 40;
+      pointer-events: none;
+    }
+    .staggered-menu-wrapper.fixed-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 40;
+      overflow: hidden;
+    }
+    .staggered-menu-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25em 1.5em;
+      background: transparent;
+      pointer-events: none;
+      z-index: 20;
+    }
+    .staggered-menu-header > * {
+      pointer-events: auto;
+    }
+    .sm-logo {
+      display: flex;
+      align-items: center;
+      user-select: none;
+    }
+    .sm-logo img {
+      height: 24px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.95;
+    }
+    .sm-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(30, 33, 19, 0.85);
+      border: 1px solid rgba(197, 202, 168, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      color: #e2e4ce;
+      font-weight: 500;
+      line-height: 1;
+      backdrop-filter: blur(8px);
+    }
+    .sm-toggle-textWrap {
+      position: relative;
+      display: inline-block;
+      height: 1em;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .sm-icon {
+      position: relative;
+      width: 16px;
+      height: 12px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sm-icon-line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform 0.3s ease;
+    }
+    .staggered-menu-panel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(18, 21, 8, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      padding: 5em 2em 2em 2em;
+      overflow-y: auto;
+      z-index: 10;
+      pointer-events: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .staggered-menu-wrapper[data-open] .staggered-menu-panel {
+      opacity: 1;
+      visibility: visible;
+    }
+    .sm-panel-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .sm-panel-title {
+      margin: 0;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #c5caa8;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .sm-panel-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .sm-panel-item {
+      position: relative;
+      color: #e2e4ce;
+      font-weight: 400;
+      font-size: 1.75rem;
+      cursor: pointer;
+      line-height: 1.2;
+      font-family: "Noto Serif", serif;
+      font-style: italic;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.25s;
+    }
+    .sm-panel-item:hover {
+      color: #c5caa8;
+    }
+    .sm-socials {
+      margin-top: auto;
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .sm-socials-title {
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #c5caa8;
+    }
+    .sm-socials-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .sm-socials-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #e2e4ce;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .sm-socials-link:hover {
+      color: #c5caa8;
+    }
+</style>
+</head>
+<body class="overflow-x-hidden min-h-screen flex flex-col bg-background text-on-surface">
+
+<!-- Tombol Ubah Bahasa (Posisi responsif: top-20 di mobile, top-6 di desktop) -->
+<div class="fixed top-20 md:top-6 right-6 z-[60] group">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3.5 rounded-full bg-surface-container/85 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[18px] md:text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs md:text-sm">EN</span>
+  </button>
+  
+  <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-primary bg-primary/10 transition-colors">English (EN)</a>
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors border-t border-outline-variant/10">Bahasa (ID)</a>
+  </div>
+</div>
+
+<!-- Top Navigation Bar (Desktop) -->
+<header class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl justify-between items-center z-50 transition-all duration-300" id="main-nav">
+  <a class="flex items-center" href="index.html">
+    <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+  </a>
+  <nav class="hidden md:flex items-center gap-8">
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 px-2 py-1 rounded" href="index.html">Home</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-bold border-b border-primary pb-1" href="villa.html">Villa</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 px-2 py-1 rounded" href="restaurant.html">Restaurant</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 px-2 py-1 rounded" href="yoga.html">Yoga</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 px-2 py-1 rounded" href="experience.html">Experience</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 px-2 py-1 rounded" href="mybookings.html">MyBookings</a>
+  </nav>
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 cursor-pointer">
+    <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-[16px]">person</span>
+    </span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
+  </button>
+</header>
+
+<!-- Mobile Navigation Bar (Staggered Menu Overlay) -->
+<div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
+  <header class="staggered-menu-header">
+    <a class="sm-logo" href="index.html">
+      <img alt="ONDA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+    </a>
+    <button class="sm-toggle" id="smToggleBtn" aria-label="Toggle Menu">
+      <span class="sm-toggle-textWrap">
+        <span class="sm-toggle-textInner" id="smToggleText">Menu</span>
+      </span>
+      <span class="sm-icon">
+        <span class="sm-icon-line" id="line1"></span>
+        <span class="sm-icon-line" id="line2"></span>
+      </span>
+    </button>
+  </header>
+
+  <div class="staggered-menu-panel" id="smPanel">
+    <div class="sm-panel-inner">
+      <h3 class="sm-panel-title">Navigation</h3>
+      <ul class="sm-panel-list">
+        <li><a class="sm-panel-item" href="index.html">Home</a></li>
+        <li><a class="sm-panel-item" href="villa.html" style="color: #c5caa8;">Villa</a></li>
+        <li><a class="sm-panel-item" href="restaurant.html">Restaurant</a></li>
+        <li><a class="sm-panel-item" href="yoga.html">Yoga</a></li>
+        <li><a class="sm-panel-item" href="experience.html">Experience</a></li>
+        <li><a class="sm-panel-item" href="mybookings.html">MyBookings</a></li>
+        <li><a class="sm-panel-item" href="#" style="color: #c5caa8;">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="sm-socials">
+      <h4 class="sm-socials-title">Connect</h4>
+      <ul class="sm-socials-list">
+        <li><a class="sm-socials-link" href="#">Instagram</a></li>
+        <li><a class="sm-socials-link" href="#">WhatsApp</a></li>
+        <li><a class="sm-socials-link" href="#">Email</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main class="flex-grow">
+  <!-- Cinematic Hero -->
+  <section class="relative w-full h-[870px] md:h-screen">
+    <div class="absolute inset-0 bg-cover bg-center" data-alt="A sweeping cinematic wide shot of a luxurious private villa hidden within a dense, lush tropical garden in Southeast Asia." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCcNinbutUjT_JD4zDu2jrJ4t_3_opPjfbvszBqsXRDPNlA5cuosHROGOldpP-nNj1ungz6uAlkzXUzQ2FASxdXTM0SvDs0jw3KQeSdtzecS34iCatT8ZA8oYqBmhMFhancuKMxyJe34F1iqxShFZYqNadsyDi1T1O2KLQYXFlqoilJWBAWDjD75qKdC8QB0lxeIwRFijRRTe1pzFHvT4vjMrp_o0pTdibzFneM_osRatC4Vq7Pyc')"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-full p-margin-mobile md:p-margin-desktop pb-12">
+      <div class="max-w-container-max mx-auto reveal active">
+        <span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary/90 mb-4 block">The Villas</span>
+        <h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-surface mb-6 leading-tight">The Garden Villa</h1>
+        <p class="font-headline-sm text-headline-sm text-on-surface-variant max-w-2xl font-light">A private tropical sanctuary designed for absolute seclusion and immersion in nature.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Thumbnails & Info Bar -->
+  <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+    <div class="flex flex-col lg:flex-row gap-gutter relative">
+      <!-- Main Content Area -->
+      <div class="w-full lg:w-2/3">
+        <!-- Quick Info Bar -->
+        <div class="flex flex-wrap gap-6 mb-16 py-6 border-y border-outline-variant/30 reveal">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">group</span>
+            <span class="font-label-md text-label-md text-on-surface">2 Guests</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">bed</span>
+            <span class="font-label-md text-label-md text-on-surface">1 Bedroom</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">pool</span>
+            <span class="font-label-md text-label-md text-on-surface">Private Pool</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 200;">restaurant</span>
+            <span class="font-label-md text-label-md text-on-surface">Breakfast Included</span>
+          </div>
+        </div>
+
+        <!-- Editorial Description -->
+        <div class="space-y-8 mb-section-gap reveal">
+          <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Hidden beneath a canopy of ancient banyan trees, The Garden Villa offers an unparalleled retreat into nature. The architecture seamlessly blends interior luxury with the raw beauty of the surrounding jungle, utilizing locally sourced dark woods and volcanic stone to create an atmosphere of grounded elegance.
+          </p>
+          <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Expansive sliding glass walls open completely to a private courtyard, blurring the lines between inside and out. Here, a plunge pool finished in deep emerald tiles mirrors the lush foliage, providing a cool respite during the balmy tropical afternoons.
+          </p>
+        </div>
+
+        <!-- Amenities Bento Grid -->
+        <div class="mb-section-gap reveal">
+          <h3 class="font-headline-lg-mobile md:font-headline-sm text-headline-lg-mobile md:text-headline-sm text-on-surface mb-8">Curated Amenities</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="bg-primary-container/85 p-6 rounded-lg border border-outline-variant/30 flex flex-col items-start gap-4 hover:bg-surface-variant transition-colors duration-300">
+              <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'wght' 200;">king_bed</span>
+              <span class="font-label-md text-label-md text-on-surface">King Size Bed</span>
+            </div>
+            <div class="bg-primary-container/85 p-6 rounded-lg border border-outline-variant/30 flex flex-col items-start gap-4 hover:bg-surface-variant transition-colors duration-300">
+              <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'wght' 200;">wifi</span>
+              <span class="font-label-md text-label-md text-on-surface">High-Speed Wi-Fi</span>
+            </div>
+            <div class="bg-primary-container/85 p-6 rounded-lg border border-outline-variant/30 flex flex-col items-start gap-4 hover:bg-surface-variant transition-colors duration-300">
+              <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'wght' 200;">bathtub</span>
+              <span class="font-label-md text-label-md text-on-surface">Stone Bathtub</span>
+            </div>
+            <div class="bg-primary-container/85 p-6 rounded-lg border border-outline-variant/30 flex flex-col items-start gap-4 hover:bg-surface-variant transition-colors duration-300">
+              <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'wght' 200;">local_bar</span>
+              <span class="font-label-md text-label-md text-on-surface">Artisan Mini Bar</span>
+            </div>
+            <div class="bg-primary-container/85 p-6 rounded-lg border border-outline-variant/30 flex flex-col items-start gap-4 hover:bg-surface-variant transition-colors duration-300">
+              <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'wght' 200;">ac_unit</span>
+              <span class="font-label-md text-label-md text-on-surface">Climate Control</span>
+            </div>
+            <div class="bg-primary-container/85 p-6 rounded-lg border border-outline-variant/30 flex flex-col items-start gap-4 hover:bg-surface-variant transition-colors duration-300">
+              <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'wght' 200;">room_service</span>
+              <span class="font-label-md text-label-md text-on-surface">24/7 Service</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticky Reservation Widget -->
+      <div class="w-full lg:w-1/3 mt-8 lg:mt-0">
+        <div class="sticky top-32 glass-panel p-8 rounded-xl reveal shadow-2xl">
+          <div class="mb-8 border-b border-outline-variant/30 pb-6">
+            <span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary/80 block mb-2">Starting From</span>
+            <div class="flex items-end gap-2">
+              <span class="font-headline-lg text-headline-lg text-secondary">$850</span>
+              <span class="font-body-md text-body-md text-on-surface-variant mb-1">/ night</span>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex flex-col gap-2">
+                <label class="font-label-caps text-label-caps text-on-surface-variant">Check-In</label>
+                <div class="bg-surface-container-low/70 border border-outline-variant/60 p-4 rounded flex items-center justify-between cursor-pointer hover:border-secondary transition-colors">
+                  <span class="font-label-md text-label-md text-on-surface">Select Date</span>
+                  <span class="material-symbols-outlined text-secondary/80">calendar_month</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="font-label-caps text-label-caps text-on-surface-variant">Check-Out</label>
+                <div class="bg-surface-container-low/70 border border-outline-variant/60 p-4 rounded flex items-center justify-between cursor-pointer hover:border-secondary transition-colors">
+                  <span class="font-label-md text-label-md text-on-surface">Select Date</span>
+                  <span class="material-symbols-outlined text-secondary/80">calendar_month</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="font-label-caps text-label-caps text-on-surface-variant">Guests</label>
+              <div class="bg-surface-container-low/70 border border-outline-variant/60 p-4 rounded flex items-center justify-between cursor-pointer hover:border-secondary transition-colors">
+                <span class="font-label-md text-label-md text-on-surface">2 Adults</span>
+                <span class="material-symbols-outlined text-secondary/80">expand_more</span>
+              </div>
+            </div>
+            <button class="w-full bg-secondary text-on-secondary font-label-md text-label-md py-4 rounded hover:bg-secondary-fixed transition-colors mt-4 font-semibold tracking-wide cursor-pointer">
+              Check Availability
+            </button>
+            <p class="text-center font-label-caps text-label-caps text-on-surface-variant mt-4">You won't be charged yet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full min-h-[500px] flex flex-col justify-end p-margin-mobile md:p-margin-desktop bg-surface-container-lowest border-t border-outline-variant/20">
+  <div class="flex flex-col gap-16 md:gap-24 w-full max-w-container-max mx-auto">
+    <div class="flex items-center opacity-85 hover:opacity-100 transition-opacity">
+      <img alt="ONDA" class="h-16 md:h-24 w-auto object-contain brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8xgoikSdnc1XIV67S1M0laiTZK694_27Eu3RYxUkKS1w_TgEyNix3kY2DLRJDxWoxSzMM5uT8HTU7FR4_tKoLoVSFdqWt9iSsx1mALUqsek5MyxmK2iMAYyB2OIXkNX-atsc5KZMOBY3aHSvVR2bPyZDFGWiOnNXLCSbM6XFddOgcGQR9n5v0CxB-MoCObGXhzF7jp_MkOgrw6zZMm7Y9078PTmEfy4mk3YtLQ8dJJLNNnFbR7f4">
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-t border-outline-variant/20 pt-8">
+      <p class="font-body-md text-body-md text-on-surface-variant">© 2026 ONDA Resorts. All rights reserved.</p>
+      <div class="flex flex-wrap gap-6">
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Privacy Policy</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Terms of Service</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Sustainability</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Careers</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Reveal animation observer
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+
+    // Staggered Menu Interactivity (Mobile)
+    const smToggleBtn = document.getElementById('smToggleBtn');
+    const staggeredMenu = document.getElementById('staggeredMenu');
+    const smToggleText = document.getElementById('smToggleText');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    let menuOpen = false;
+
+    if(smToggleBtn && staggeredMenu) {
+        smToggleBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                staggeredMenu.setAttribute('data-open', 'true');
+                staggeredMenu.classList.add('fixed-wrapper');
+                smToggleText.textContent = 'Close';
+                line1.style.transform = 'translateY(5px) rotate(45deg)';
+                line2.style.transform = 'translateY(-5px) rotate(-45deg)';
+            } else {
+                staggeredMenu.removeAttribute('data-open');
+                staggeredMenu.classList.remove('fixed-wrapper');
+                smToggleText.textContent = 'Menu';
+                line1.style.transform = 'none';
+                line2.style.transform = 'none';
+            }
+        });
+
+        // Close menu on selecting item
+        const mobileLinks = document.querySelectorAll('.sm-panel-item');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                staggeredMenu.removeAttribute('data-open');
+                staggeredMenu.classList.remove('fixed-wrapper');
+                smToggleText.textContent = 'Menu';
+                line1.style.transform = 'none';
+                line2.style.transform = 'none';
+            });
+        });
+    }
+</script>
+</body>
+</html>
