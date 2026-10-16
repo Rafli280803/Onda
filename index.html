@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="scroll-behavior: smooth;">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ONDA | A Private Tropical Retreat in Lombok</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#ffdad6",
+          "primary": "#c5caa8",
+          "on-primary-fixed": "#191d08",
+          "tertiary-fixed-dim": "#cec6b5",
+          "surface-variant": "#333627",
+          "tertiary-fixed": "#ebe2d0",
+          "on-secondary": "#392f19",
+          "on-tertiary-fixed-variant": "#4b463a",
+          "surface-container-low": "#1a1d0f",
+          "secondary": "#d6c5a5",
+          "inverse-primary": "#5c6145",
+          "tertiary": "#cec6b5",
+          "surface-dim": "#121508",
+          "secondary-fixed": "#f2e0bf",
+          "error-container": "#93000a",
+          "on-surface": "#e2e4ce",
+          "primary-fixed": "#e1e6c2",
+          "primary-container": "#454a30",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#51452d",
+          "on-primary-container": "#b4b998",
+          "outline-variant": "#47473e",
+          "secondary-fixed-dim": "#d6c5a5",
+          "on-tertiary-container": "#bdb5a5",
+          "on-secondary-fixed": "#231a06",
+          "surface": "#121508",
+          "surface-container-high": "#282b1d",
+          "secondary-container": "#53482f",
+          "on-error": "#690005",
+          "on-surface-variant": "#c8c7bb",
+          "surface-container": "#1e2113",
+          "surface-container-highest": "#333627",
+          "background": "#121508",
+          "surface-bright": "#383b2b",
+          "surface-container-lowest": "#0d0f04",
+          "inverse-surface": "#e2e4ce",
+          "on-tertiary-fixed": "#1f1b11",
+          "on-secondary-container": "#c7b797",
+          "surface-tint": "#c5caa8",
+          "on-primary": "#2e331b",
+          "inverse-on-surface": "#2f3223",
+          "outline": "#919186",
+          "primary-fixed-dim": "#c5caa8",
+          "on-primary-fixed-variant": "#44492f",
+          "on-background": "#e2e4ce",
+          "on-tertiary": "#353025",
+          "tertiary-container": "#4c473a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "container-max": "1440px",
+          "section-gap": "160px",
+          "margin-mobile": "20px",
+          "gutter": "32px",
+          "margin-desktop": "64px",
+          "unit": "8px"
+        },
+        "fontFamily": {
+          "display-hero-mobile": ["Noto Serif"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Noto Serif"],
+          "display-hero": ["Noto Serif"],
+          "headline-md": ["Noto Serif"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Noto Serif"],
+          "label-caps": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Noto Serif"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "display-md": ["Noto Serif"],
+          "display-lg": ["Noto Serif"]
+        },
+        "fontSize": {
+          "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+          "display-md": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+          "display-lg": ["64px", { "lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+        }
+      },
+    },
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+          font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121508; }
+        ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #454a30; }
+        .gsap-reveal { opacity: 0; transform: translateY(40px); }
+        .marquee-inner { display: flex; white-space: nowrap; }
+        
+        /* Carousel specific styles to hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+
+<!-- Tombol Ubah Bahasa (Di luar navbar, melayang di paling kanan atas layar, ukurannya disamakan dengan navbar py-3.5 px-6) -->
+<div class="fixed top-6 right-6 z-[60] group">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
+  </button>
+  
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-primary bg-primary/10 transition-colors">English (EN)</a>
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors border-t border-outline-variant/10">Bahasa (ID)</a>
+  </div>
+</div>
+
+<!-- Top Navigation Bar (Original & Clean) -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl flex justify-between items-center z-50 transition-all duration-300" id="main-nav">
+  <!-- Brand Logo -->
+  <a class="flex items-center" href="#">
+    <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+  </a>
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex items-center gap-8">
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-bold border-b border-primary pb-1 scale-95 active:scale-90 transition-transform" href="#">Home</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="villa.html">Villa</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="restaurant.html">Restaurant</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="yoga.html">Yoga</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="experience.html">Experience</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="mybookings.html">MyBookings</a>
+  </nav>
+  <!-- Trailing Action -->
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90">
+    <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-[16px]">person</span>
+    </span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
+  </button>
+  <!-- Mobile Menu Toggle -->
+  <button class="md:hidden text-primary">
+    <span class="material-symbols-outlined" data-icon="menu">menu</span>
+  </button>
+</header>
+
+<!-- Main Content -->
+<main class="min-h-screen">
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="w-full h-full bg-cover bg-center filter brightness-[0.7]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjIFY_WhPZowR3ppwD_qwUN6ARyyc0j9m1Emrw-pUUTooypvfa0S1FbMtJiVUVPcaWOQaflidOdXsLG-cnsbLcIowHljbvPp6s3p6X2iknoPy0EAbZPWExf-k3sj3TnWSpOIr5hh5xNQYvzqwLTzQfuXJ3i8qD3KxRS4WPRXJ35WiSiPm8DgpKuob7dRGi_12c66Zq_C_OFmVJa9W5ocGLbX62C3geVochaQv0fFrQE3ONAFsTlGU')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-container-max mx-auto flex flex-col items-center text-center gap-8 pb-16">
+      <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/90 gsap-reveal">A Private Tropical Retreat</p>
+      <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface italic max-w-4xl gsap-reveal">Stay somewhere worth remembering.</h1>
+      <p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant gsap-reveal">Discover a sanctuary where architectural harmony meets the raw beauty of nature. A place designed for slowing down.</p>
+      <a class="mt-4 bg-primary text-on-primary font-semibold px-8 py-4 rounded-md font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary-container hover:text-on-surface transition-colors duration-300 shadow-md gsap-reveal" href="villa.html">Explore Villas</a>
+    </div>
+    <div class="absolute bottom-margin-mobile md:bottom-margin-desktop left-margin-mobile md:left-margin-desktop z-10 hidden md:block">
+      <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/70">Lombok · INDONESIA</p>
+    </div>
+    <div class="absolute bottom-margin-mobile md:bottom-margin-desktop right-margin-mobile md:right-margin-desktop z-10 flex-col items-center gap-4 hidden md:flex">
+      <span class="w-[1px] h-16 bg-gradient-to-b from-primary/70 to-transparent"></span>
+      <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/70" style="writing-mode: vertical-rl;">Scroll</p>
+    </div>
+  </section>
+
+  <!-- Experience / Philosophy Section -->
+  <section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-dim">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+      <div class="md:col-span-5 flex flex-col gap-8 gsap-reveal">
+        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface tracking-tight">More than a stay.<br>A slower way of living.</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">Immerse yourself in spaces crafted to foster stillness. Our retreats are intentionally designed to blur the boundaries between indoor comfort and the wild, untamed beauty of the Lombok landscape.</p>
+        <a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps tracking-widest uppercase border-b border-primary/40 pb-1 self-start hover:border-primary transition-colors" href="#">
+          Discover Our Philosophy
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+      <div class="md:col-span-7 mt-12 md:mt-0 gsap-reveal">
+        <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border border-outline-variant/30">
+          <img class="w-full h-full object-cover" data-alt="Minimalist open-air living space in a luxury tropical villa." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_gSYVxoUttvAZNGM73SC4pPmm3Xvah-Rl2VDix3xmXFbLMlxpsLhjNqTINrgtp-xFEeaEbNHRPFYHIn9AkycJmOVlqgU2xFIzAHqz3_6Qc3BnNmrby-t0F0PF3WQ0g_v2lD74zBva2oebutuJbo7a84uiz0PsL3GR_AI9AelRXu9FDoRZmE7BrXVqjaDPeU5jzwhcKCP8yJEoKF2K9ZZ666qAsOeK9B3pN6y43JJFU3vIyAnDZg4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: The Sanctuary / Amenities -->
+  <section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+    <div class="max-w-container-max mx-auto flex flex-col gap-16">
+      <div class="text-center max-w-2xl mx-auto gsap-reveal">
+        <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/80 mb-3">The Sanctuary</p>
+        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface">Curated Amenities for Deep Restoration</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- Amenity 1 -->
+        <div class="p-8 rounded-xl bg-surface-container/50 border border-outline-variant/20 flex flex-col gap-6 gsap-reveal hover:border-primary/50 transition-colors">
+          <span class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-2xl">waves</span>
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-headline-sm text-on-surface">Private Pool & Spa</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Secluded mineral pools and organic wellness rituals overlooking lush valley canopies.</p>
+          </div>
+        </div>
+        <!-- Amenity 2 -->
+        <div class="p-8 rounded-xl bg-surface-container/50 border border-outline-variant/20 flex flex-col gap-6 gsap-reveal hover:border-primary/50 transition-colors">
+          <span class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-2xl">restaurant</span>
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-headline-sm text-on-surface">Fine Dining & Cafe</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Farm-to-table Lombok gastronomy crafted with ingredients from our volcanic permaculture garden.</p>
+          </div>
+        </div>
+        <!-- Amenity 3 -->
+        <div class="p-8 rounded-xl bg-surface-container/50 border border-outline-variant/20 flex flex-col gap-6 gsap-reveal hover:border-primary/50 transition-colors">
+          <span class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-2xl">self_improvement</span>
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-headline-sm text-on-surface">Daily Yoga & Meditation</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Sunrise practice pavilions immersed in nature's soundtrack and guided meditation sessions.</p>
+          </div>
+        </div>
+        <!-- Amenity 4 -->
+        <div class="p-8 rounded-xl bg-surface-container/50 border border-outline-variant/20 flex flex-col gap-6 gsap-reveal hover:border-primary/50 transition-colors">
+          <span class="w-12 h-12 rounded-full bg-primary-container/30 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined text-2xl">explore</span>
+          </span>
+          <div class="flex flex-col gap-2">
+            <h3 class="font-headline-sm text-on-surface">Concierge & Excursions</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Personalized itineraries, hidden waterfall tours, and private cultural temple journeys.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Villas Section -->
+  <section class="w-full py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 gsap-reveal">
+      <div>
+        <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/80 mb-2">Accommodations</p>
+        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface">Featured Sanctuaries</h2>
+      </div>
+      <a href="villa.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all duration-300">
+        View All Villas <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <!-- Villa 1: The Garden Villa (Spans 8 cols) -->
+      <article class="md:col-span-8 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-[600px] border border-outline-variant/20 bg-surface-container-low gsap-reveal">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDftnuepPIgCy0ElCEPT3LyWhuFBaKSIUmdks6QlaElj10eR-U4yMBQT6qbaW8oicTU3t2pbPwbEOKwwD47dUpIjCG7zONURK1YKSB0pmB6QJIF7N1ycZ3svhSeU61KUpcjMKmpl8cxFBtK_2KtNAddJHPcKIEVDyw87f8-OEp3-Vab2d4XzALL9lC4oP7o9wSTyxm6KlpNkJjzCBnHblHU73hrZxlNVpH3DKbqLXl2eKqHwDMZODI">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">bed</span> 1 Bed</span>
+            <span>•</span>
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">group</span> Up to 2 Guests</span>
+          </div>
+          <h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Garden Villa</h3>
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $850 / night</span>
+            <a href="villa.html" class="font-label-md text-label-md text-secondary flex items-center group-hover:translate-x-2 transition-transform">Explore Villa <span class="material-symbols-outlined ml-1">arrow_forward</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 2: The Cliff Villa (Spans 4 cols) -->
+      <article class="md:col-span-4 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-[600px] border border-outline-variant/20 bg-surface-container-low gsap-reveal">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCvtq6138SNN2EQrBFkHsreTqxgqOXbhm8I6R8QwJ6aWGzGkbompQn5v5v70hXvoBzCjRn6Yfyx_iceIJqvBDIKHZHL1tq8G9dHyME0GKDlCRdqffQJupRR1zWXOR6lDTXeAaYxU0Bxswpfu7cIJtJF6uvi7rP502rMaVlVZgFRKVuWEYfe1GGCaxigLSQhFhoZUIwir3VgSAxw7308ItqeWg_42JILcGjuN1P284BsKV66k_8uXM">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span>2 Bed</span>
+            <span>•</span>
+            <span>Ocean View</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">The Cliff Villa</h3>
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $1,200</span>
+            <a href="villa.html" class="font-label-md text-label-md text-secondary flex items-center opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">arrow_forward</span></a>
+          </div>
+        </div>
+      </article>
+  </section>
+
+  <!-- Section 3: Testimonials / Guest Reflections Auto Carousel (Shows 3) -->
+  <section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop bg-background overflow-hidden">
+    <div class="max-w-container-max mx-auto flex flex-col items-center text-center gap-16">
+      <div class="max-w-xl gsap-reveal">
+        <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/80 mb-3">Guest Reflections</p>
+        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface">Words from Our Visitors</h2>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="w-full relative gsap-reveal">
+        <!-- Carousel Track / Scroll Area -->
+        <div id="testimonial-carousel" class="flex gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory w-full pb-4">
+          
+          <!-- Testimonial 1 -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.3333%-21.33px)] snap-start p-10 rounded-2xl bg-surface-container/40 border border-outline-variant/30 flex flex-col justify-between gap-8 text-left">
+            <p class="font-headline-sm text-on-surface italic leading-relaxed">"ONDA is a rare masterpiece. The silence of the jungle combined with exquisite architectural minimalism made our stay genuinely transformational."</p>
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">V</div>
+              <div>
+                <h4 class="font-label-md text-on-surface">Vogue Living</h4>
+                <p class="font-body-md text-xs text-on-surface-variant">Global Architecture Review</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.3333%-21.33px)] snap-start p-10 rounded-2xl bg-surface-container/40 border border-outline-variant/30 flex flex-col justify-between gap-8 text-left">
+            <p class="font-headline-sm text-on-surface italic leading-relaxed">"An absolute sanctuary of peace. Every detail, from the scent of natural wood to the impeccable hospitality, is designed for profound relaxation."</p>
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">C</div>
+              <div>
+                <h4 class="font-label-md text-on-surface">Condé Nast Traveler</h4>
+                <p class="font-body-md text-xs text-on-surface-variant">Editor's Choice</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.3333%-21.33px)] snap-start p-10 rounded-2xl bg-surface-container/40 border border-outline-variant/30 flex flex-col justify-between gap-8 text-left">
+            <p class="font-headline-sm text-on-surface italic leading-relaxed">"The most tranquil escape in Lombok. The private plunge pool overlooking the emerald canopy at dawn is an experience I will cherish forever."</p>
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">H</div>
+              <div>
+                <h4 class="font-label-md text-on-surface">Harper's Bazaar</h4>
+                <p class="font-body-md text-xs text-on-surface-variant">Luxury Travel Edition</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.3333%-21.33px)] snap-start p-10 rounded-2xl bg-surface-container/40 border border-outline-variant/30 flex flex-col justify-between gap-8 text-left">
+            <p class="font-headline-sm text-on-surface italic leading-relaxed">"A masterclass in tropical modernism. The way the natural light interacts with the organic materials throughout the day is pure poetry."</p>
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">A</div>
+              <div>
+                <h4 class="font-label-md text-on-surface">Architectural Digest</h4>
+                <p class="font-body-md text-xs text-on-surface-variant">Feature Property</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.3333%-21.33px)] snap-start p-10 rounded-2xl bg-surface-container/40 border border-outline-variant/30 flex flex-col justify-between gap-8 text-left">
+            <p class="font-headline-sm text-on-surface italic leading-relaxed">"We found the perfect balance of luxury and wilderness. The farm-to-table dining experience and secluded atmosphere were absolutely phenomenal."</p>
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">T</div>
+              <div>
+                <h4 class="font-label-md text-on-surface">Travel + Leisure</h4>
+                <p class="font-body-md text-xs text-on-surface-variant">World's Best 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.3333%-21.33px)] snap-start p-10 rounded-2xl bg-surface-container/40 border border-outline-variant/30 flex flex-col justify-between gap-8 text-left">
+            <p class="font-headline-sm text-on-surface italic leading-relaxed">"Unparalleled privacy and service. It feels less like a commercial hotel and far more like your own private estate in the heart of Indonesia."</p>
+            <div class="flex items-center gap-4 mt-auto pt-4 border-t border-outline-variant/20">
+              <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-semibold">T</div>
+              <div>
+                <h4 class="font-label-md text-on-surface">The Telegraph</h4>
+                <p class="font-body-md text-xs text-on-surface-variant">Ultimate Hideaways</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full min-h-[60vh] flex flex-col justify-end p-margin-mobile md:p-margin-desktop bg-surface-dim border-t border-outline-variant/20">
+  <div class="flex flex-col gap-section-gap w-full max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+      <!-- Brand Logo -->
+      <div class="flex flex-col items-start gap-3">
+        <img alt="ONDA" class="h-10 md:h-14 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQ3J37Ki9lkRdt8Ry_t75x-ImYbRwpofOFaUrifmILcMUZjmmrP0lDONpVF0yNSu6vmuEXDC-1Oy-K0629mYa5s_haUfl_hkCpNBoOQj4i4aEXKtOcHQeGHKOfENU6NxTDgYQn6Tibvejw01-VI_J7iKRE8GnHqCy-jiy8jJuWo1kyqMVyvXIUuD4oPrykMaBDOcFI3o3nJCyMvHSNwq9fUYPt4y-TpEy6XfgoOedYO0qnJPTitY">
+      </div>
+      <!-- Links -->
+      <nav class="flex flex-col md:flex-row gap-8 md:gap-16 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Whatsapp</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Instagram</a>
+      </nav>
+    </div>
+    <!-- Copyright -->
+    <div class="font-body-md text-body-md text-on-surface-variant pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div class="flex items-center gap-2 font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant opacity-80">
+        <span class="material-symbols-outlined text-[16px]">public</span>
+        <span>EN / ID (Lombok, ID)</span>
+      </div>
+      <div>© 2026 ONDA Resorts. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Fade Up Animation
+    gsap.utils.toArray('.gsap-reveal').forEach(element => {
+        gsap.to(element, {
+            scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+    });
+
+    // Marquee Animation
+    gsap.to("#marquee", {
+        xPercent: -33.33,
+        ease: "none",
+        duration: 15,
+        repeat: -1
+    });
+    
+    // Navbar scroll effect
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) {
+            nav.classList.add('bg-surface-container/90', 'border-outline-variant/50');
+            nav.classList.remove('bg-surface-container/60', 'border-outline-variant/30');
+        } else {
+            nav.classList.add('bg-surface-container/60', 'border-outline-variant/30');
+            nav.classList.remove('bg-surface-container/90', 'border-outline-variant/50');
+        }
+    });
+
+    // Auto-Play Testimonial Carousel Script
+    const carousel = document.getElementById('testimonial-carousel');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    if (carousel && prevBtn && nextBtn) {
+        let autoPlayInterval;
+        
+        const getCardWidth = () => {
+            const card = carousel.querySelector('div');
+            // Card width + gap (gap-8 is 32px)
+            return card.offsetWidth + 32; 
+        };
+
+        const scrollNext = () => {
+            // Check if we are near the end of the scroll area
+            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                // Instantly loop back to the start smoothly
+                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+            }
+        };
+
+        const scrollPrev = () => {
+            if (carousel.scrollLeft <= 0) {
+                // Instantly jump to the end
+                carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+            }
+        };
+
+        const startAutoPlay = () => {
+            autoPlayInterval = setInterval(scrollNext, 3500); // Auto scrolls every 3.5 seconds
+        };
+
+        const resetAutoPlay = () => {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        };
+
+        // Button clicks trigger scroll and reset the timer
+        nextBtn.addEventListener('click', () => {
+            scrollNext();
+            resetAutoPlay();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            scrollPrev();
+            resetAutoPlay();
+        });
+
+        // Pause carousel on hover for better user experience
+        carousel.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+        carousel.addEventListener('mouseleave', startAutoPlay);
+
+        // Start the automated movement
+        startAutoPlay();
+    }
+</script>
+</body>
+</html>

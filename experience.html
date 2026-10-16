@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="scroll-behavior: smooth;">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ONDA - Curated Experiences & Sanctuaries | Lombok</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "on-error-container": "#ffdad6",
+                    "primary": "#c5caa8",
+                    "on-primary-fixed": "#191d08",
+                    "tertiary-fixed-dim": "#cec6b5",
+                    "surface-variant": "#333627",
+                    "tertiary-fixed": "#ebe2d0",
+                    "on-secondary": "#392f19",
+                    "on-tertiary-fixed-variant": "#4b463a",
+                    "surface-container-low": "#1a1d0f",
+                    "secondary": "#d6c5a5",
+                    "inverse-primary": "#5c6145",
+                    "tertiary": "#cec6b5",
+                    "surface-dim": "#121508",
+                    "secondary-fixed": "#f2e0bf",
+                    "error-container": "#93000a",
+                    "on-surface": "#e2e4ce",
+                    "primary-fixed": "#e1e6c2",
+                    "primary-container": "#454a30",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#51452d",
+                    "on-primary-container": "#b4b998",
+                    "outline-variant": "#47473e",
+                    "secondary-fixed-dim": "#d6c5a5",
+                    "on-tertiary-container": "#bdb5a5",
+                    "on-secondary-fixed": "#231a06",
+                    "surface": "#121508",
+                    "surface-container-high": "#282b1d",
+                    "secondary-container": "#53482f",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#c8c7bb",
+                    "surface-container": "#1e2113",
+                    "surface-container-highest": "#333627",
+                    "background": "#121508",
+                    "surface-bright": "#383b2b",
+                    "surface-container-lowest": "#0d0f04",
+                    "inverse-surface": "#e2e4ce",
+                    "on-tertiary-fixed": "#1f1b11",
+                    "on-secondary-container": "#c7b797",
+                    "surface-tint": "#c5caa8",
+                    "on-primary": "#2e331b",
+                    "inverse-on-surface": "#2f3223",
+                    "outline": "#919186",
+                    "primary-fixed-dim": "#c5caa8",
+                    "on-primary-fixed-variant": "#44492f",
+                    "on-background": "#e2e4ce",
+                    "on-tertiary": "#353025",
+                    "tertiary-container": "#4c473a"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "container-max": "1440px",
+                    "section-gap": "160px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "unit": "8px"
+                },
+                "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                    "label-caps": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                    "display-md": ["Noto Serif", "Literata", "serif"],
+                    "headline-sm": ["Noto Serif", "Literata", "serif"],
+                    "body-lg": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                    "display-lg": ["Noto Serif", "Literata", "serif"],
+                    "headline-lg-mobile": ["Noto Serif", "Literata", "serif"],
+                    "headline-lg": ["Noto Serif", "Literata", "serif"],
+                    "body-md": ["Plus Jakarta Sans", "Inter", "sans-serif"]
+                },
+                "fontSize": {
+                    "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                    "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+                    "display-md": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                    "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                    "display-lg": ["64px", { "lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                    "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                    "headline-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+                    "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+                }
+            }
+        }
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined[data-weight="fill"] {
+      font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #121508; }
+    ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #454a30; }
+    .gsap-reveal { opacity: 0; transform: translateY(40px); }
+</style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary font-body-md text-body-md">
+
+<!-- Tombol Ubah Bahasa (Melayang di pojok kanan atas) -->
+<div class="fixed top-6 right-6 z-[60] group">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
+  </button>
+  
+  <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-primary bg-primary/10 transition-colors">English (EN)</a>
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors border-t border-outline-variant/10">Bahasa (ID)</a>
+  </div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl flex justify-between items-center z-50 transition-all duration-300" id="main-nav">
+  <!-- Brand Logo -->
+  <a class="flex items-center" href="index.html">
+    <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+  </a>
+  <!-- Desktop Navigation (Menu Experience Aktif) -->
+  <nav class="hidden md:flex items-center gap-8">
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="index.html">Home</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="villa.html">Villa</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="restaurant.html">Restaurant</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="yoga.html">Yoga</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-bold border-b border-primary pb-1 scale-95 active:scale-90 transition-transform" href="experience.html">Experience</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="mybookings.html">MyBookings</a>
+  </nav>
+  <!-- Trailing Action -->
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90">
+    <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-[16px]">person</span>
+    </span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
+  </button>
+  <!-- Mobile Menu Toggle -->
+  <button class="md:hidden text-primary">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+</header>
+
+<!-- Main Content -->
+<main>
+<div class="flex flex-col w-full">
+<!-- Top Atmospheric Intro & Scrim Section -->
+<section class="relative w-full overflow-hidden pb-16 pt-32 md:pt-40 px-6 sm:px-12 lg:px-20">
+<div class="absolute -top-40 right-10 w-[500px] h-[500px] rounded-full bg-surface-container-highest/30 blur-[130px] pointer-events-none"></div>
+<div class="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-secondary/5 blur-[100px] pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto w-full relative z-10">
+<!-- Overline & Category Tag -->
+<div class="flex items-center gap-3 mb-6">
+<span class="w-8 h-[1px] bg-secondary/40 inline-block"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">Curated Experiences</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary/60"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 tracking-widest hidden sm:inline">Pantai Kuta, Lombok Tengah</span>
+</div>
+<!-- Editorial Headline & Narrative Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-[1.1] text-balance">
+    Moments Crafted <br class="hidden sm:inline">
+<span class="italic font-light text-secondary">for the Senses</span>
+</h1>
+</div>
+<div class="lg:col-span-4 lg:pb-2">
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed">From sunrise surf sessions across south Lombok's pristine bays to sacred Sasak weaving rituals in Sade, discover moments sculpted specifically for renewal and wonder.</p>
+</div>
+</div>
+<!-- Filter Controls Bar -->
+<div class="mt-14 pt-8 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-4" id="experience-filters">
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="filter-btn active-filter px-5 py-2.5 rounded-full font-label-caps text-label-caps tracking-widest uppercase transition-all duration-300 bg-secondary text-surface-container-lowest font-medium shadow-sm cursor-pointer" data-filter="all">
+    All Experiences
+  </button>
+<button class="filter-btn px-5 py-2.5 rounded-full font-label-caps text-label-caps tracking-widest uppercase transition-all duration-300 bg-surface-container-high/60 text-secondary hover:bg-surface-container-highest hover:text-on-surface cursor-pointer" data-filter="ocean">
+    Ocean &amp; Surf
+  </button>
+<button class="filter-btn px-5 py-2.5 rounded-full font-label-caps text-label-caps tracking-widest uppercase transition-all duration-300 bg-surface-container-high/60 text-secondary hover:bg-surface-container-highest hover:text-on-surface cursor-pointer" data-filter="wellness">
+    Wellness &amp; Rituals
+  </button>
+<button class="filter-btn px-5 py-2.5 rounded-full font-label-caps text-label-caps tracking-widest uppercase transition-all duration-300 bg-surface-container-high/60 text-secondary hover:bg-surface-container-highest hover:text-on-surface cursor-pointer" data-filter="culinary">
+    Culinary &amp; Dining
+  </button>
+<button class="filter-btn px-5 py-2.5 rounded-full font-label-caps text-label-caps tracking-widest uppercase transition-all duration-300 bg-surface-container-high/60 text-secondary hover:bg-surface-container-highest hover:text-on-surface cursor-pointer" data-filter="culture">
+    Cultural &amp; Land
+  </button>
+</div>
+<div class="hidden md:flex items-center gap-3 text-on-surface-variant/70 font-label-caps text-label-caps">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="">Seasonal South Swell Almanac • Gerupuk &amp; Kuta Swell 4.8ft • Pantai Kuta</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Featured Signature Experience -->
+<section class="w-full px-6 sm:px-12 lg:px-20 py-8">
+<div class="max-w-[1440px] mx-auto">
+<div class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[580px] lg:min-h-[640px]">
+<div class="lg:col-span-7 relative min-h-[380px] lg:min-h-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-105" data-alt="Cinematic editorial photography of private sunrise surfing in Lombok south coast reef break" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrowHhpgRExVK39lJxt44_7sDcUT_qYuw6ls0UkMzqKlu4uRh-BmH9EwA3Oda2K9lDcE4ibAkLIbU746rJojA9hGxwzpHcpTa-S-3Loo_TTY0D33w83Ig1kELBNhcE6sOThOclbW8yv8r8EVwrHCyVPGvkC5pmYWGstzniatWdHckF3rSRlse7pd12l7t70aXsPvBrmpdjvayRvVerN3bp2DbWVEJul8QZ9zI_5Q');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-black/30 lg:hidden"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-surface-container-low hidden lg:block"></div>
+<div class="absolute top-6 left-6 flex items-center gap-2 bg-surface-container-lowest/80 backdrop-blur-md px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Signature Masterpiece</span>
+</div>
+<div class="absolute bottom-6 left-6 hidden sm:flex items-center gap-4 bg-surface-container-lowest/70 backdrop-blur-md px-4 py-3 rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">wb_twilight</span>
+<span class="font-label-md text-label-md text-on-surface">Dawn Session 05:45 AM</span>
+</div>
+<div class="w-px h-4 bg-outline-variant/50"></div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="font-label-caps text-label-caps uppercase">Reef Tide: Rising</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 p-8 sm:p-12 lg:p-14 flex flex-col justify-between bg-surface-container-low">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant pb-4 mb-6 border-b border-outline-variant/30">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Ocean Sanctuary</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant/80">3 Hours • Gerupuk</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight mb-5">Private Sunrise Surf Coaching &amp; Gerupuk Reef Safari</h2>
+<p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed mb-8">Guided by our resident Sasak watermen, navigate untouched morning southern swells via traditional wooden outrigger boats, accompanied by 4K water cinematography, ocean swell telemetry, and a shoreline recovery breakfast.</p>
+<div class="space-y-3.5 mb-10">
+<div class="flex items-center gap-3 text-on-surface">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Custom molded firewire craft &amp; hand-shaped logs provided</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time bathymetric &amp; offshore wind telemetry briefing</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Electrolyte cold-pressed coconut elixir &amp; volcanic salt scrub post-surf</span>
+</div>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block mb-1">Per Guest / Inclusive</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-medium tracking-tight">IDR 2,850,000</span>
+</div>
+<button class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-secondary text-surface-container-lowest font-label-md text-label-md font-semibold tracking-wider uppercase hover:bg-secondary-fixed transition-all duration-300 shadow-lg flex items-center justify-center gap-2 group cursor-pointer">
+<span class="">Reserve Experience</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Editorial Card Grid -->
+<section class="w-full px-6 sm:px-12 lg:px-20 py-20">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-2">The Sanctuary Roster</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Immersive Encounters</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light">
+    Each journey is orchestrated with intimate groups of four guests or fewer, ensuring unhurried contemplation and individualized attention.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="experience-grid">
+<!-- Card 1 -->
+<article class="experience-card flex flex-col rounded-xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-1.5 border border-outline-variant/20" data-category="wellness">
+<div class="relative h-72 w-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1UKoObziDdBHwts4DV7A__Qkxw4DEB1Ve4r7m9_FKV7wpG7EmzqMjBi8I-2MTIin6ffMQnmzqA8v2O5AxjMYxTjBF5S0002d8uqMhRBNClGSvnwbnK5pRPMUYxAqIufPz9qewSC5wLQ-yloxmgAXyx7d2oXTjQ9tbSPAzJfgmm4OezmDy9WaXjvDcnNgEkKjCmbCmLHyJabvHJj1NkxI9bNT5r40VHj6qIhwZqw');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-black/20"></div>
+<span class="absolute top-4 left-4 px-3 py-1 rounded bg-surface-container-lowest/70 backdrop-blur-md font-label-caps text-label-caps text-secondary uppercase">MANDALIKA RIDGE SHALA</span>
+<span class="absolute bottom-4 right-4 font-label-caps text-label-caps text-on-surface-variant/90 bg-surface-container-lowest/60 px-2.5 py-1 rounded">90 Mins • Sunset</span>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Mind &amp; Frequency</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Sacred Sound Healing &amp; Twilight Yoga</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Multi-harmonic Tibetan singing bowls and restorative asana sequenced along ocean breezes of southern Lombok, accompanied by native herbal elixirs.</p>
+</div>
+<div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block text-[10px]">Energy Exchange</span>
+<span class="font-title-md text-title-md text-secondary">IDR 950,000</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:text-on-surface transition-colors py-1 group cursor-pointer">
+<span class="">Inquire</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Card 2 -->
+<article class="experience-card flex flex-col rounded-xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-1.5 border border-outline-variant/20" data-category="culinary">
+<div class="relative h-72 w-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIWPxSsfPpnL44atg0scuFk2EyXNzXMLGDgU__V_fx2nNdUFhlDB8hJSj0IZd5belXyAhl0y9MLhwxCW9i15DixXX5h20rwOqDiBQ65m5yu9uGwExD4NghcohyVzqhA77-AYKYD8ID26Qc4zCWMbgTUsYF3DTHO7Uoh5R0tmQwqrszfVP3LQwgXoTh9GEDVDfwfankJD6p-tvZFr0nXQd74iwYUkSghx11PGs1SQ');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-black/20"></div>
+<span class="absolute top-4 left-4 px-3 py-1 rounded bg-surface-container-lowest/70 backdrop-blur-md font-label-caps text-label-caps text-secondary uppercase">Permaculture Garden</span>
+<span class="absolute bottom-4 right-4 font-label-caps text-label-caps text-on-surface-variant/90 bg-surface-container-lowest/60 px-2.5 py-1 rounded">3.5 Hours • Midday</span>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Gastronomic Craft</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Sasak Farm-to-Table Bamboo Cooking Masterclass</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Forage rare heirloom Sasak botanicals with our Executive Chef. Craft stone-ground sambal beberuk and wood-fired aromatic Lombok delicacies.</p>
+</div>
+<div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block text-[10px]">Private Workshop</span>
+<span class="font-title-md text-title-md text-secondary">IDR 1,650,000</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:text-on-surface transition-colors py-1 group cursor-pointer">
+<span class="">Inquire</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Card 3 -->
+<article class="experience-card flex flex-col rounded-xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-1.5 border border-outline-variant/20" data-category="ocean">
+<div class="relative h-72 w-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8h8R04sJgOOHvQjdk48dE0O6wkLykqDMlP79Ah5tFDPxhrQoY2AeI42hLESOAirRK8TQxbajG74RrjqSh7yicAwhtkstCK6CEMskGKmXi9ZGJtZ8L6mzqodXCFpkzjLOQjU8MjmjA91KvqoelMvjlAfRQX7G2yUiEqwyluIKMt7jE2F7R8RmN-xILcWQ5ETzC8XP4rb5INLvtDknD8QsRZTp6HPuB644BHtIYbA');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-black/20"></div>
+<span class="absolute top-4 left-4 px-3 py-1 rounded bg-surface-container-lowest/70 backdrop-blur-md font-label-caps text-label-caps text-secondary uppercase">Coastal Waters</span>
+<span class="absolute bottom-4 right-4 font-label-caps text-label-caps text-on-surface-variant/90 bg-surface-container-lowest/60 px-2.5 py-1 rounded">4 Hours • Afternoon</span>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Maritime Journey</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Tanjung Aan &amp; Pink Beach Catamaran Sailing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Skim past untouched coastal cliffs of southern Lombok. Drop anchor in crystal turquoise bays for guided sea turtle encounters.</p>
+</div>
+<div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block text-[10px]">Private Charter</span>
+<span class="font-title-md text-title-md text-secondary">IDR 4,200,000</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:text-on-surface transition-colors py-1 group cursor-pointer">
+<span class="">Inquire</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Card 4 -->
+<article class="experience-card flex flex-col rounded-xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-1.5 border border-outline-variant/20" data-category="culture">
+<div class="relative h-72 w-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJpH1HJkZnJiSVwaNM_pib5cCKcnUq9X87JmVB5L8l8i9MGpvqwOVBfM0_TwDBUz0JX0CS4FTWt6m66p6x35o27kNK5W-Aw-E9AA3n7STUJ8FWgkKqH16tlsaTjnK0aL01UtgOgSdkBFrAyGJe4qKV5V9D29IIDJFSXcnWQl1Y0e2k-E8xNowLSipP7meTJy4VoOiyUNuUiShW87CFVZmwr-I-n0NyY9QsVpGR3g');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-black/20"></div>
+<span class="absolute top-4 left-4 px-3 py-1 rounded bg-surface-container-lowest/70 backdrop-blur-md font-label-caps text-label-caps text-secondary uppercase">SASAK HERITAGE</span>
+<span class="absolute bottom-4 right-4 font-label-caps text-label-caps text-on-surface-variant/90 bg-surface-container-lowest/60 px-2.5 py-1 rounded">Half-Day • Dawn</span>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Spiritual Cleansing</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Sade Heritage &amp; Traditional Weaving Walk</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Immerse in centuries of Sasak culture at Sade village. Discover exquisite handloom songket and ikat artistry, guided by elder village artisans.</p>
+</div>
+<div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block text-[10px]">Curated Ritual</span>
+<span class="font-title-md text-title-md text-secondary">IDR 1,900,000</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:text-on-surface transition-colors py-1 group cursor-pointer">
+<span class="">Inquire</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Card 5 -->
+<article class="experience-card flex flex-col rounded-xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-1.5 border border-outline-variant/20" data-category="wellness">
+<div class="relative h-72 w-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALm2VhaLuYhYfwfCtF5jFZZr4EROhdbAAPgp1BjXK6mfCNPWuJVma9WRtLN3HrPJ08dIKQfyQZ1WhLCXljLOI92wyavsvbsVgrh0xehuj5h5Y4g1uFhKNgAfkJFhbBct1uAmbnF_ddso1YegStHgpsav1h2waskahWW_Ob0Iyct1y5Le_Z9TAi63P8ERiwYhMCM4kO0hI_c4h65CFWYYR0Nwk7Gy7qiot4GIfm6g');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-black/20"></div>
+<span class="absolute top-4 left-4 px-3 py-1 rounded bg-surface-container-lowest/70 backdrop-blur-md font-label-caps text-label-caps text-secondary uppercase">BUKIT MERESE</span>
+<span class="absolute bottom-4 right-4 font-label-caps text-label-caps text-on-surface-variant/90 bg-surface-container-lowest/60 px-2.5 py-1 rounded">2 Hours • Night</span>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Astral &amp; Flame</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Merese Hill Sunset &amp; Stargazing Fire Ritual</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">A private twilight gathering atop iconic Bukit Merese overlooking Kuta Bay, gathered around fragrant volcanic fire pits beneath the southern milky way.</p>
+</div>
+<div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block text-[10px]">Evening Gathering</span>
+<span class="font-title-md text-title-md text-secondary">IDR 1,150,000</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:text-on-surface transition-colors py-1 group cursor-pointer">
+<span class="">Inquire</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+</article>
+
+<!-- Card 6 -->
+<article class="experience-card flex flex-col rounded-xl overflow-hidden bg-surface-container-high transition-transform duration-500 hover:-translate-y-1.5 border border-outline-variant/20" data-category="culture">
+<div class="relative h-72 w-full overflow-hidden group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRPypL5ruyE_VhJ7lZH3gQ65u3816aOkf1gKdVFenL73OF-gTcUjBnrLUGWxs-2lEduuqs7ySaPspDvZKXyptucu28aH9l9SvTHiiSEIv6R7GacMkliI5_sQQsk5rHwA7kBrhfEQZhbrKvhiPAl4cFCP-JAh4jIJjep6iiWoozIJgKDd7QlBK2LeprsswNSGMhkh5OLADCXyUgqSFTTUZYj_j31Fy04A9dC6rm5Q');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-black/20"></div>
+<span class="absolute top-4 left-4 px-3 py-1 rounded bg-surface-container-lowest/70 backdrop-blur-md font-label-caps text-label-caps text-secondary uppercase">RINJANI FOOTHILLS</span>
+<span class="absolute bottom-4 right-4 font-label-caps text-label-caps text-on-surface-variant/90 bg-surface-container-lowest/60 px-2.5 py-1 rounded">5 Hours • Morning</span>
+</div>
+<div class="p-8 flex flex-col flex-1 justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Ecological Immersion</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Benang Kelambu Waterfall &amp; Rainforest Trek</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Journey to Central Lombok's enchanting curtain waterfalls and lush tropical slopes, discovering endemic flora and mountain springs.</p>
+</div>
+<div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant/70 uppercase block text-[10px]">Guided Expedition</span>
+<span class="font-title-md text-title-md text-secondary">IDR 2,400,000</span>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:text-on-surface transition-colors py-1 group cursor-pointer">
+<span class="">Inquire</span>
+<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">north_east</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full min-h-[60vh] flex flex-col justify-end p-margin-mobile md:p-margin-desktop bg-surface-dim border-t border-outline-variant/20">
+  <div class="flex flex-col gap-section-gap w-full max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+      <div class="flex flex-col items-start gap-3">
+        <img alt="ONDA" class="h-10 md:h-14 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQ3J37Ki9lkRdt8Ry_t75x-ImYbRwpofOFaUrifmILcMUZjmmrP0lDONpVF0yNSu6vmuEXDC-1Oy-K0629mYa5s_haUfl_hkCpNBoOQj4i4aEXKtOcHQeGHKOfENU6NxTDgYQn6Tibvejw01-VI_J7iKRE8GnHqCy-jiy8jJuWo1kyqMVyvXIUuD4oPrykMaBDOcFI3o3nJCyMvHSNwq9fUYPt4y-TpEy6XfgoOedYO0qnJPTitY">
+      </div>
+      <nav class="flex flex-col md:flex-row gap-8 md:gap-16 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Whatsapp</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Instagram</a>
+      </nav>
+    </div>
+    <div class="font-body-md text-body-md text-on-surface-variant pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div class="flex items-center gap-2 font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant opacity-80">
+        <span class="material-symbols-outlined text-[16px]">public</span>
+        <span>EN / ID (Lombok, ID)</span>
+      </div>
+      <div>© 2026 ONDA Resorts. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Fade Up Animation
+  gsap.utils.toArray('.gsap-reveal').forEach(element => {
+      gsap.to(element, {
+          scrollTrigger: {
+              trigger: element,
+              start: "top 85%",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out"
+      });
+  });
+
+  // Navbar scroll effect
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+      if(nav) {
+          if(window.scrollY > 50) {
+              nav.classList.add('bg-surface-container/90', 'border-outline-variant/50');
+              nav.classList.remove('bg-surface-container/60', 'border-outline-variant/30');
+          } else {
+              nav.classList.add('bg-surface-container/60', 'border-outline-variant/30');
+              nav.classList.remove('bg-surface-container/90', 'border-outline-variant/50');
+          }
+      }
+  });
+
+  // Interactive filtering logic
+  const filterButtons = document.querySelectorAll('#experience-filters .filter-btn');
+  const cards = document.querySelectorAll('#experience-grid .experience-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-secondary', 'text-surface-container-lowest', 'font-medium', 'shadow-sm');
+        btn.classList.add('bg-surface-container-high/60', 'text-secondary');
+      });
+      button.classList.add('bg-secondary', 'text-surface-container-lowest', 'font-medium', 'shadow-sm');
+      button.classList.remove('bg-surface-container-high/60', 'text-secondary');
+
+      const filter = button.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+          card.style.opacity = '0';
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.4s ease';
+            card.style.opacity = '1';
+          }, 20);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Timetable Day Tab Switcher Simulation
+  const dayTabs = document.querySelectorAll('#day-selector-container .day-tab');
+  dayTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      dayTabs.forEach(t => {
+        t.classList.remove('active-day', 'bg-surface-container', 'border-b-2', 'border-secondary');
+        t.classList.add('bg-surface-container-high/40');
+      });
+      tab.classList.add('active-day', 'bg-surface-container', 'border-b-2', 'border-secondary');
+      tab.classList.remove('bg-surface-container-high/40');
+      
+      const timetable = document.getElementById('timetable-content');
+      timetable.style.opacity = '0.5';
+      setTimeout(() => {
+        timetable.style.opacity = '1';
+      }, 180);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="scroll-behavior: smooth;">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ONDA - Wellness & Yoga Sanctuary | Lombok</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#ffdad6",
+          "primary": "#c5caa8",
+          "on-primary-fixed": "#191d08",
+          "tertiary-fixed-dim": "#cec6b5",
+          "surface-variant": "#333627",
+          "tertiary-fixed": "#ebe2d0",
+          "on-secondary": "#392f19",
+          "on-tertiary-fixed-variant": "#4b463a",
+          "surface-container-low": "#1a1d0f",
+          "secondary": "#d6c5a5",
+          "inverse-primary": "#5c6145",
+          "tertiary": "#cec6b5",
+          "surface-dim": "#121508",
+          "secondary-fixed": "#f2e0bf",
+          "error-container": "#93000a",
+          "on-surface": "#e2e4ce",
+          "primary-fixed": "#e1e6c2",
+          "primary-container": "#454a30",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#51452d",
+          "on-primary-container": "#b4b998",
+          "outline-variant": "#47473e",
+          "secondary-fixed-dim": "#d6c5a5",
+          "on-tertiary-container": "#bdb5a5",
+          "on-secondary-fixed": "#231a06",
+          "surface": "#121508",
+          "surface-container-high": "#282b1d",
+          "secondary-container": "#53482f",
+          "on-error": "#690005",
+          "on-surface-variant": "#c8c7bb",
+          "surface-container": "#1e2113",
+          "surface-container-highest": "#333627",
+          "background": "#121508",
+          "surface-bright": "#383b2b",
+          "surface-container-lowest": "#0d0f04",
+          "inverse-surface": "#e2e4ce",
+          "on-tertiary-fixed": "#1f1b11",
+          "on-secondary-container": "#c7b797",
+          "surface-tint": "#c5caa8",
+          "on-primary": "#2e331b",
+          "inverse-on-surface": "#2f3223",
+          "outline": "#919186",
+          "primary-fixed-dim": "#c5caa8",
+          "on-primary-fixed-variant": "#44492f",
+          "on-background": "#e2e4ce",
+          "on-tertiary": "#353025",
+          "tertiary-container": "#4c473a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "container-max": "1440px",
+          "section-gap": "160px",
+          "margin-mobile": "20px",
+          "gutter": "32px",
+          "margin-desktop": "64px",
+          "unit": "8px"
+        },
+        "fontFamily": {
+          "display-hero-mobile": ["Noto Serif"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Noto Serif"],
+          "display-hero": ["Noto Serif"],
+          "headline-md": ["Noto Serif"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Noto Serif"],
+          "label-caps": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Noto Serif"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "display-md": ["Noto Serif"],
+          "display-lg": ["Noto Serif"]
+        },
+        "fontSize": {
+          "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+          "display-md": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+          "display-lg": ["64px", { "lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+        }
+      },
+    },
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+          font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121508; }
+        ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #454a30; }
+        .gsap-reveal { opacity: 0; transform: translateY(40px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .text-glow { text-shadow: 0 0 20px rgba(238, 219, 192, 0.15); }
+        .ambient-shadow { box-shadow: 0 10px 40px -10px rgba(238, 219, 192, 0.05); }
+</style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+
+<!-- Tombol Ubah Bahasa (Melayang di pojok kanan atas) -->
+<div class="fixed top-6 right-6 z-[60] group">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
+  </button>
+  
+  <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-primary bg-primary/10 transition-colors">English (EN)</a>
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors border-t border-outline-variant/10">Bahasa (ID)</a>
+  </div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl flex justify-between items-center z-50 transition-all duration-300" id="main-nav">
+  <a class="flex items-center" href="index.html">
+    <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+  </a>
+  <nav class="hidden md:flex items-center gap-8">
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="index.html">Home</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="villa.html">Villa</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="restaurant.html">Restaurant</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-bold border-b border-primary pb-1 scale-95 active:scale-90 transition-transform" href="yoga.html">Yoga</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="experience.html">Experience</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="mybookings.html">MyBookings</a>
+  </nav>
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90">
+    <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-[16px]">person</span>
+    </span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
+  </button>
+  <button class="md:hidden text-primary">
+    <span class="material-symbols-outlined" data-icon="menu">menu</span>
+  </button>
+</header>
+
+<!-- Main Content -->
+<main class="min-h-screen">
+  <!-- Hero Section Yoga -->
+  <section class="relative h-screen w-full flex items-center justify-center pt-20">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover filter brightness-[0.55]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS2GjdjI-LPi0LN26E1jaIJ_s3rNyoBUP-JBOGGTjZlvoAaVa5fYQ2PCIfwauZkvbB-gZr4mfSCDJ1-jWxuijo3SgZ-NevrbaDzqBvbgRB4U9Rb6DIo4_NejEt5j3OXI2-jkUMOD1aycG8TIvr22nenxaJ5oGiD0MvJb-XOlf1a9k-GN7cLwvhzwp0Yc0pUD6A93qP8FUhJQ4OpGjtiXv6HB9u3GLEpkOkb1-Djq6d2tHstEl_SGp66A"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+      <span class="font-label-caps text-label-caps text-primary mb-6 tracking-widest uppercase gsap-reveal">Yoga & Wellness Sanctuary</span>
+      <h1 class="font-display-lg text-3xl sm:text-5xl md:text-display-lg text-on-surface mb-6 md:mb-8 gsap-reveal leading-tight text-glow">Begin the day within.</h1>
+      <p class="font-body-lg text-sm sm:text-base md:text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8 md:mb-12 gsap-reveal font-light">Discover serenity through guided practices designed to align body, mind, and the eternal soul of the Lombok landscape.</p>
+      <button class="bg-primary text-on-primary h-[56px] px-10 rounded-full hover:bg-primary-container transition-colors duration-300 font-label-md text-label-md uppercase tracking-wider gsap-reveal cursor-pointer">Book a Session</button>
+    </div>
+  </section>
+
+  <!-- Curated Practices Section -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="mb-12 md:mb-20 gsap-reveal">
+      <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Holistic Offerings</span>
+      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface mb-4">Curated Practices</h2>
+      <div class="w-24 h-[1px] bg-primary/30"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <!-- Practice 1 -->
+      <div class="md:col-span-8 bg-surface-container/50 rounded-2xl overflow-hidden border border-outline-variant/20 ambient-shadow group relative h-[400px] md:h-[500px] gsap-reveal hover:border-primary/50 transition-colors">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnt8V-DlK1lFg1wrKFXH3VFWQ1ZjkgPK-NxlFFIMclyKMK49dM7prv2ZcbC1E9DdfhWE8HDKJT-ffmK5Kt0O1cp7RZJzliyf2UPLVRtJjjNMNEe8UTht9xiHPd1FQLp-LTlloSZkSlxc7SkWVUpqoS9jS4G3xz43OtFoZIN1a4K0YRM_arppALAgK8D4pFyB3d8vkuACL0tGoWbxc9-cd4qzj3MFxf9TQZmmwzoLPz07SQ58TEhQXuWQ"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-6 md:p-10 flex flex-col justify-end h-full w-full">
+          <div class="flex items-center space-x-3 mb-3 md:mb-4">
+            <span class="material-symbols-outlined text-primary text-base md:text-xl" style="font-variation-settings: 'FILL' 1;">wb_twilight</span>
+            <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">60 MIN</span>
+          </div>
+          <h3 class="font-headline-sm text-lg md:text-headline-sm text-on-surface mb-2 md:mb-3">Sunrise Yoga</h3>
+          <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant max-w-md">Awaken your senses with gentle asanas as the jungle comes alive. A restorative flow to greet the morning light.</p>
+        </div>
+      </div>
+
+      <!-- Practice 2 -->
+      <div class="md:col-span-4 bg-surface-container/50 rounded-2xl overflow-hidden border border-outline-variant/20 ambient-shadow group relative h-[450px] md:h-[500px] flex flex-col gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-1/2 relative overflow-hidden">
+          <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI5GERTnFcCxGXvZPhLiE6S-9hDENPM_drKhF3xlLPYYZWEAJxoLJpVi4bKSliK1R4fSBDMXEopnK3hgkNcAcrpCYexlh2xzX7N386fgNPA3cMj6FxqE5xql44YiWWH-HT6G6Igdt_eInPj83F3OSN_SpRviEVghXMY8I7Abhr2qIki5GH2SZO92I2EojhKP5i9QxMxqXb_uttoUH-if5cA01a7TOFboyJoRqgpZ8lswaAdJ4NKVZ-OA"/>
+        </div>
+        <div class="h-1/2 p-6 md:p-8 flex flex-col justify-center bg-surface-container/80">
+          <div class="flex items-center space-x-3 mb-3 md:mb-4">
+            <span class="material-symbols-outlined text-primary text-base md:text-xl" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+            <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">90 MIN</span>
+          </div>
+          <h3 class="font-headline-sm text-lg md:text-headline-sm text-on-surface mb-2 md:mb-3">Private Yoga</h3>
+          <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant">Personalized alignment and focused instruction tailored to your unique rhythm and needs.</p>
+        </div>
+      </div>
+
+      <!-- Practice 3 -->
+      <div class="md:col-span-4 bg-surface-container/50 rounded-2xl overflow-hidden border border-outline-variant/20 ambient-shadow group relative h-[350px] md:h-[400px] flex flex-col gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="p-6 md:p-8 flex flex-col justify-start bg-surface-container/80 h-full">
+          <div class="flex items-center space-x-3 mb-4 md:mb-8">
+            <span class="material-symbols-outlined text-primary text-base md:text-xl" style="font-variation-settings: 'FILL' 1;">nights_stay</span>
+            <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">75 MIN</span>
+          </div>
+          <h3 class="font-headline-sm text-lg md:text-headline-sm text-on-surface mb-2 md:mb-3">Sunset Flow</h3>
+          <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant mb-auto">Release the day's tension with a grounding vinyasa sequence as dusk falls over the valley.</p>
+          <button class="text-left font-label-md text-label-md text-primary uppercase tracking-wider hover:text-on-surface transition-colors mt-4 md:mt-6 flex items-center gap-2 cursor-pointer">Reserve <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+        </div>
+      </div>
+
+      <!-- Practice 4 -->
+      <div class="md:col-span-8 bg-surface-container/50 rounded-2xl overflow-hidden border border-outline-variant/20 ambient-shadow group relative h-[380px] md:h-[400px] gsap-reveal hover:border-primary/50 transition-colors">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBh6DRWZuIvDpdqMagQmyb3CFNDV3fXMgUlSOCQZTb54wDp5ph4zNgEmsP7aNT6Cddl6-FOWeYNqlCIBo0S75eLCPrYkYTUdFl7cLo3PznkT71-dxp6NmIH8T1ggc67_9-6FLF0zi0EyIQi8-cHm29CdLy4mD8YRmaz268awxyI0xKor2S2xxnGFuAE1LgmKN5EDolJRX7DI5Z_DxTjO1hhB5EoznqyBk759gdMqw5AtwiB5RmDvKRTA"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+        <div class="absolute inset-0 p-6 md:p-10 flex flex-col justify-center w-full md:w-2/3">
+          <div class="flex items-center space-x-3 mb-3 md:mb-4">
+            <span class="material-symbols-outlined text-primary text-base md:text-xl" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+            <span class="font-label-caps text-label-caps text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">60 MIN</span>
+          </div>
+          <h3 class="font-headline-sm text-lg md:text-headline-sm text-on-surface mb-2 md:mb-3">Sound Healing</h3>
+          <p class="font-body-md text-xs sm:text-sm md:text-body-md text-on-surface-variant max-w-sm">Immerse yourself in therapeutic frequencies. Crystal bowls and ancient gongs clear energetic blockages and restore deep harmony.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full min-h-[60vh] flex flex-col justify-end p-margin-mobile md:p-margin-desktop bg-surface-dim border-t border-outline-variant/20">
+  <div class="flex flex-col gap-section-gap w-full max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+      <div class="flex flex-col items-start gap-3">
+        <img alt="ONDA" class="h-10 md:h-14 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQ3J37Ki9lkRdt8Ry_t75x-ImYbRwpofOFaUrifmILcMUZjmmrP0lDONpVF0yNSu6vmuEXDC-1Oy-K0629mYa5s_haUfl_hkCpNBoOQj4i4aEXKtOcHQeGHKOfENU6NxTDgYQn6Tibvejw01-VI_J7iKRE8GnHqCy-jiy8jJuWo1kyqMVyvXIUuD4oPrykMaBDOcFI3o3nJCyMvHSNwq9fUYPt4y-TpEy6XfgoOedYO0qnJPTitY">
+      </div>
+      <nav class="flex flex-col md:flex-row gap-8 md:gap-16 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Whatsapp</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Instagram</a>
+      </nav>
+    </div>
+    <div class="font-body-md text-body-md text-on-surface-variant pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div class="flex items-center gap-2 font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant opacity-80">
+        <span class="material-symbols-outlined text-[16px]">public</span>
+        <span>EN / ID (Lombok, ID)</span>
+      </div>
+      <div>© 2026 ONDA Resorts. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.gsap-reveal').forEach(element => {
+        gsap.to(element, {
+            scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+    });
+
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if(nav) {
+            if(window.scrollY > 50) {
+                nav.classList.add('bg-surface-container/90', 'border-outline-variant/50');
+                nav.classList.remove('bg-surface-container/60', 'border-outline-variant/30');
+            } else {
+                nav.classList.add('bg-surface-container/60', 'border-outline-variant/30');
+                nav.classList.remove('bg-surface-container/90', 'border-outline-variant/50');
+            }
+        }
+    });
+</script>
+</body>
+</html>

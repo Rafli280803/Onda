@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="scroll-behavior: smooth;">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ONDA - Lunch Menu & Gastronomy | Lombok</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#ffdad6",
+          "primary": "#c5caa8",
+          "on-primary-fixed": "#191d08",
+          "tertiary-fixed-dim": "#cec6b5",
+          "surface-variant": "#333627",
+          "tertiary-fixed": "#ebe2d0",
+          "on-secondary": "#392f19",
+          "on-tertiary-fixed-variant": "#4b463a",
+          "surface-container-low": "#1a1d0f",
+          "secondary": "#d6c5a5",
+          "inverse-primary": "#5c6145",
+          "tertiary": "#cec6b5",
+          "surface-dim": "#121508",
+          "secondary-fixed": "#f2e0bf",
+          "error-container": "#93000a",
+          "on-surface": "#e2e4ce",
+          "primary-fixed": "#e1e6c2",
+          "primary-container": "#454a30",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#51452d",
+          "on-primary-container": "#b4b998",
+          "outline-variant": "#47473e",
+          "secondary-fixed-dim": "#d6c5a5",
+          "on-tertiary-container": "#bdb5a5",
+          "on-secondary-fixed": "#231a06",
+          "surface": "#121508",
+          "surface-container-high": "#282b1d",
+          "secondary-container": "#53482f",
+          "on-error": "#690005",
+          "on-surface-variant": "#c8c7bb",
+          "surface-container": "#1e2113",
+          "surface-container-highest": "#333627",
+          "background": "#121508",
+          "surface-bright": "#383b2b",
+          "surface-container-lowest": "#0d0f04",
+          "inverse-surface": "#e2e4ce",
+          "on-tertiary-fixed": "#1f1b11",
+          "on-secondary-container": "#c7b797",
+          "surface-tint": "#c5caa8",
+          "on-primary": "#2e331b",
+          "inverse-on-surface": "#2f3223",
+          "outline": "#919186",
+          "primary-fixed-dim": "#c5caa8",
+          "on-primary-fixed-variant": "#44492f",
+          "on-background": "#e2e4ce",
+          "on-tertiary": "#353025",
+          "tertiary-container": "#4c473a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "container-max": "1440px",
+          "section-gap": "160px",
+          "margin-mobile": "20px",
+          "gutter": "32px",
+          "margin-desktop": "64px",
+          "unit": "8px"
+        },
+        "fontFamily": {
+          "display-hero-mobile": ["Noto Serif"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Noto Serif"],
+          "display-hero": ["Noto Serif"],
+          "headline-md": ["Noto Serif"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Noto Serif"],
+          "label-caps": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Noto Serif"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "display-md": ["Noto Serif"],
+          "display-lg": ["Noto Serif"]
+        },
+        "fontSize": {
+          "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+          "display-md": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+          "display-lg": ["64px", { "lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+        }
+      },
+    },
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+          font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121508; }
+        ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #454a30; }
+        .gsap-reveal { opacity: 0; transform: translateY(40px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .text-glow { text-shadow: 0 0 20px rgba(238, 219, 192, 0.15); }
+        .soft-gradient-overlay { background: linear-gradient(to top, rgba(19, 20, 16, 1) 0%, rgba(19, 20, 16, 0.4) 50%, rgba(19, 20, 16, 0.1) 100%); }
+</style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+
+<!-- Tombol Ubah Bahasa (Melayang di pojok kanan atas) -->
+<div class="fixed top-6 right-6 z-[60] group">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
+  </button>
+  
+  <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-primary bg-primary/10 transition-colors">English (EN)</a>
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors border-t border-outline-variant/10">Bahasa (ID)</a>
+  </div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl flex justify-between items-center z-50 transition-all duration-300" id="main-nav">
+  <a class="flex items-center" href="index.html">
+    <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+  </a>
+  <nav class="hidden md:flex items-center gap-8">
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="index.html">Home</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="villa.html">Villa</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-bold border-b border-primary pb-1 scale-95 active:scale-90 transition-transform" href="restaurant.html">Restaurant</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="yoga.html">Yoga</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="experience.html">Experience</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="mybookings.html">MyBookings</a>
+  </nav>
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90">
+    <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-[16px]">person</span>
+    </span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
+  </button>
+  <button class="md:hidden text-primary">
+    <span class="material-symbols-outlined" data-icon="menu">menu</span>
+  </button>
+</header>
+
+<!-- Main Content -->
+<main class="min-h-screen">
+  <!-- Hero Section Lunch -->
+  <section class="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover filter brightness-[0.55]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX15TAHwTDSF9W7FN0efJXgHpi4OY0bBurYL9EN6AEyTeugkRi0GWJ7Gucof6fvoDL-8C9_vfN1Bd_7j9GUADu6OaTAWXS979N9cY0KL2CleR2EM24vX12RObZkzTPLefI0qRJYZaUS7eG04hYf5-zH8bnAo2SqzEiTHNqr9MVnK8LcBrF9udi4I__GZgHsw7K134c-sTfkBBSYYx-mtgikHG0_3ivTecyqmWB7ZOMdhQX_vvdswrtXA"/>
+      <div class="absolute inset-0 soft-gradient-overlay mix-blend-multiply"></div>
+    </div>
+    <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center mt-12">
+      <a href="restaurant.html" class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps tracking-widest uppercase mb-4 hover:underline">
+        <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Restaurant
+      </a>
+      <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-3 block uppercase border border-primary/30 px-4 py-1.5 rounded-full bg-surface/20 backdrop-blur-sm gsap-reveal">12:00 - 15:00</span>
+      <h1 class="font-display-lg text-3xl sm:text-5xl md:text-display-lg text-primary max-w-4xl mx-auto leading-tight text-glow gsap-reveal">
+        The Midday Solstice
+      </h1>
+      <p class="font-body-lg text-sm sm:text-base md:text-body-lg text-on-surface-variant mt-4 max-w-2xl mx-auto font-light gsap-reveal">
+        A refreshing exploration of vibrant midday flavors, featuring crisp garden harvests, light proteins, and cooling tropical refreshers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Menu List Section with Images -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="text-center mb-16 gsap-reveal">
+      <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Midday Selections</span>
+      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface">Lunch Menu Catalogue</h2>
+      <div class="w-16 h-px bg-primary/30 mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Lunch Item 1 -->
+      <div class="bg-surface-container/50 border border-outline-variant/20 rounded-2xl overflow-hidden flex flex-col justify-between gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-64 w-full overflow-hidden relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB--rJCQdgvt1RznCa75o0WmHhDJAcgnVHVdBFLX4TJEmEG4iUx8C--vfs3FE94MeXZWSZJkUIn6PEMcYqrqSMBBCYcprCJf8ois8GguaH8BNl8wCR7nry3N0LMg9rM8TBGoI631vSu1QDdwtzkSWuqVgl0gpcNMyekLLMVBknOMn-okVg0EM6EeHGruugLct6EsBMCeFfQVve78n5au_eCKqR5Pte3drMUO3Xucn88kuG4qstg9Bvg4g" alt="Ubud Heritage Forest Greens" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-sm text-on-surface text-lg">Ubud Heritage Forest Greens</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$18</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">Wild edible ferns, pickled palm hearts, roasted candlenuts, and sweet lime-kemangi dressing.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch Item 2 -->
+      <div class="bg-surface-container/50 border border-outline-variant/20 rounded-2xl overflow-hidden flex flex-col justify-between gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-64 w-full overflow-hidden relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq8GkADb0JgzSALNFM5XK3nQ8P1ExhnXAW3ayzmZLCSoKmiy05acB12xwTcinqz9KJp8j4hIjciO6e3z__KBu8ZNJgLJRoJ7QIaLpaMa1ecbaO3rP_aHcmTmS5r2jK7xppNA4Vy79QWFvGVKYsnZ7sQBYPdvQXa_JYKz12XdzQ4ZlsaMPffsjKoLU3ylol8uiSgza20vfrxUNUzm3o-lq_0xbcfEMj3sYXDdVG62nrZUqcd4EGBbM83Q" alt="Grilled Mahi-Mahi Banana Leaf Wrap" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-sm text-on-surface text-lg">Grilled Mahi-Mahi Leaf Wrap</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$26</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">Fresh Lombok catch marinated in yellow spices, grilled in banana leaves, served with sambal matah and red rice.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch Item 3 -->
+      <div class="bg-surface-container/50 border border-outline-variant/20 rounded-2xl overflow-hidden flex flex-col justify-between gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-64 w-full overflow-hidden relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDykLtqLr7tuSKN1FiXIgEjdfHp9mvb5n8DcWVqolKzomtRe9pl5aRATFqK_qEJSnLkK9c7cPIZpnm4CWo3DEW-KBe81IW5sX5i-7mTq_CM0E1Aeuv4skfgRDD2tdWARQeTwBnViaJc8hO2dDSiG_o3GOQGVwDyMsICbC1kc7Y05mqyWWpM-iFmBPImOTBA_t-_TpXjO2AxOhFFtYd-xp14YPdPLIbDtGPYSMAHx5kc7oURDy0c3RxBQ" alt="Crispy Duck Salad Bowl" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-sm text-on-surface text-lg">Crispy Duck Salad Bowl</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$24</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">Shredded spiced duck confit, pomelo segments, watercress, toasted peanuts, and tamarind vinaigrette.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch Item 4 -->
+      <div class="bg-surface-container/50 border border-outline-variant/20 rounded-2xl overflow-hidden flex flex-col justify-between gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-64 w-full overflow-hidden relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVCuAWq89CTlTkB_MWUiwh_CRC-O9WeokkphREbJedxFOPemyfqJyeC8HfGFmaRdgkai-D-fs5bJ6DldX8Kl-0-PWX2-W1wUfn4MsmOuU3cdn1Wark-OpYQNaRX6voI5ELLicj1DgDgMOHRB_NcZ0uuXasULBi05f5VReAbuqMeedi75J484e-fzkVOoUbAWeNH27o_pFCKvOhfbTMgGsMDmAGmaiVvUjPIpEMgUOP4rGifjA_hjAXxw" alt="Lemongrass Chicken Skewers" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-sm text-on-surface text-lg">Lemongrass Chicken Satay</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$21</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">Free-range chicken skewered on lemongrass stalks, charcoal-grilled, served with artisanal peanut sauce and rice cakes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch Item 5 -->
+      <div class="bg-surface-container/50 border border-outline-variant/20 rounded-2xl overflow-hidden flex flex-col justify-between gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-64 w-full overflow-hidden relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX15TAHwTDSF9W7FN0efJXgHpi4OY0bBurYL9EN6AEyTeugkRi0GWJ7Gucof6fvoDL-8C9_vfN1Bd_7j9GUADu6OaTAWXS979N9cY0KL2CleR2EM24vX12RObZkzTPLefI0qRJYZaUS7eG04hYf5-zH8bnAo2SqzEiTHNqr9MVnK8LcBrF9udi4I__GZgHsw7K134c-sTfkBBSYYx-mtgikHG0_3ivTecyqmWB7ZOMdhQX_vvdswrtXA" alt="Jackfruit Rendang Sandwich" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-sm text-on-surface text-lg">Young Jackfruit Rendang Panini</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$19</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">Slow-simmered tender young jackfruit in rich coconut rendang spices, tucked in toasted artisanal sourdough.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lunch Item 6 -->
+      <div class="bg-surface-container/50 border border-outline-variant/20 rounded-2xl overflow-hidden flex flex-col justify-between gsap-reveal hover:border-primary/50 transition-colors">
+        <div class="h-64 w-full overflow-hidden relative">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3eg_qqDjIwMc36ZWKt1x2TDIhHd80mO81gx4QQ6RQR340lOTLMoJes4lF5uUaSAVU4B9y73DaChIQvGWqGPpJn7dRYQe9ZHt87ZrDPOumrp9GaR0Iy3lrhHUtKfp1iYFN2RW8yFL1F0w_6Gl1OQdUY_4U0dfsgd5HuWabXmI9IWE3azp1FJUVJ3zfu3mZaUhIDt0lwYbG0IrqDc0tDji3NKSx7TaJlWnBlL4JXp9D5sLBNMerQ9RoEA" alt="Refreshing Young Coconut & Lime Cooler" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+        </div>
+        <div class="p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-headline-sm text-on-surface text-lg">Young Coconut & Lime Cooler</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$9</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">Fresh whole young coconut water infused with squeezed kaffir lime, mint leaves, and a touch of raw honey.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="bg-surface-container-low rounded-[28px] border border-outline-variant/20 p-8 sm:p-12 md:p-24 text-center relative overflow-hidden gsap-reveal">
+      <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at center, #eedbc0 1px, transparent 1px); background-size: 24px 24px;"></div>
+      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface mb-4 md:mb-6 relative z-10">Join us for midday repose.</h2>
+      <p class="font-body-lg text-sm sm:text-base md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8 md:mb-10 relative z-10">
+        Drop by after your morning exploration or reserve your favorite shaded table overlooking the gardens.
+      </p>
+      <button class="bg-primary text-on-primary font-label-md px-10 py-5 rounded-full hover:bg-primary-container transition-colors duration-300 h-[56px] inline-flex items-center justify-center relative z-10 uppercase tracking-widest text-xs cursor-pointer">
+        Book Lunch Table
+      </button>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full min-h-[60vh] flex flex-col justify-end p-margin-mobile md:p-margin-desktop bg-surface-dim border-t border-outline-variant/20">
+  <div class="flex flex-col gap-section-gap w-full max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+      <div class="flex flex-col items-start gap-3">
+        <img alt="ONDA" class="h-10 md:h-14 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQ3J37Ki9lkRdt8Ry_t75x-ImYbRwpofOFaUrifmILcMUZjmmrP0lDONpVF0yNSu6vmuEXDC-1Oy-K0629mYa5s_haUfl_hkCpNBoOQj4i4aEXKtOcHQeGHKOfENU6NxTDgYQn6Tibvejw01-VI_J7iKRE8GnHqCy-jiy8jJuWo1kyqMVyvXIUuD4oPrykMaBDOcFI3o3nJCyMvHSNwq9fUYPt4y-TpEy6XfgoOedYO0qnJPTitY">
+      </div>
+      <nav class="flex flex-col md:flex-row gap-8 md:gap-16 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Whatsapp</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100" href="#">Instagram</a>
+      </nav>
+    </div>
+    <div class="font-body-md text-body-md text-on-surface-variant pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div class="flex items-center gap-2 font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant opacity-80">
+        <span class="material-symbols-outlined text-[16px]">public</span>
+        <span>EN / ID (Lombok, ID)</span>
+      </div>
+      <div>© 2026 ONDA Resorts. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.gsap-reveal').forEach(element => {
+        gsap.to(element, {
+            scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power3.out"
+        });
+    });
+
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if(nav) {
+            if(window.scrollY > 50) {
+                nav.classList.add('bg-surface-container/90', 'border-outline-variant/50');
+                nav.classList.remove('bg-surface-container/60', 'border-outline-variant/30');
+            } else {
+                nav.classList.add('bg-surface-container/60', 'border-outline-variant/30');
+                nav.classList.remove('bg-surface-container/90', 'border-outline-variant/50');
+            }
+        }
+    });
+</script>
+</body>
+</html>

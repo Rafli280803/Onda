@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ONDA - The Villas | Accommodations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-error-container": "#ffdad6",
+          "primary": "#c5caa8",
+          "on-primary-fixed": "#191d08",
+          "tertiary-fixed-dim": "#cec6b5",
+          "surface-variant": "#333627",
+          "tertiary-fixed": "#ebe2d0",
+          "on-secondary": "#392f19",
+          "on-tertiary-fixed-variant": "#4b463a",
+          "surface-container-low": "#1a1d0f",
+          "secondary": "#d6c5a5",
+          "inverse-primary": "#5c6145",
+          "tertiary": "#cec6b5",
+          "surface-dim": "#121508",
+          "secondary-fixed": "#f2e0bf",
+          "error-container": "#93000a",
+          "on-surface": "#e2e4ce",
+          "primary-fixed": "#e1e6c2",
+          "primary-container": "#454a30",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#51452d",
+          "on-primary-container": "#b4b998",
+          "outline-variant": "#47473e",
+          "secondary-fixed-dim": "#d6c5a5",
+          "on-tertiary-container": "#bdb5a5",
+          "on-secondary-fixed": "#231a06",
+          "surface": "#121508",
+          "surface-container-high": "#282b1d",
+          "secondary-container": "#53482f",
+          "on-error": "#690005",
+          "on-surface-variant": "#c8c7bb",
+          "surface-container": "#1e2113",
+          "surface-container-highest": "#333627",
+          "background": "#121508",
+          "surface-bright": "#383b2b",
+          "surface-container-lowest": "#0d0f04",
+          "inverse-surface": "#e2e4ce",
+          "on-tertiary-fixed": "#1f1b11",
+          "on-secondary-container": "#c7b797",
+          "surface-tint": "#c5caa8",
+          "on-primary": "#2e331b",
+          "inverse-on-surface": "#2f3223",
+          "outline": "#919186",
+          "primary-fixed-dim": "#c5caa8",
+          "on-primary-fixed-variant": "#44492f",
+          "on-background": "#e2e4ce",
+          "on-tertiary": "#353025",
+          "tertiary-container": "#4c473a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "container-max": "1440px",
+          "section-gap": "160px",
+          "margin-mobile": "20px",
+          "gutter": "32px",
+          "margin-desktop": "64px",
+          "unit": "8px"
+        },
+        "fontFamily": {
+          "display-hero-mobile": ["Noto Serif"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Noto Serif"],
+          "display-hero": ["Noto Serif"],
+          "headline-md": ["Noto Serif"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Noto Serif"],
+          "label-caps": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Noto Serif"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "display-md": ["Noto Serif"],
+          "display-lg": ["Noto Serif"]
+        },
+        "fontSize": {
+          "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+          "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+          "display-md": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "300" }],
+          "display-lg": ["64px", { "lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+          "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+          "headline-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+          "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+        }
+      },
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+          font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121508; }
+        ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #454a30; }
+        
+        /* Hide scrollbar for filters */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+
+<!-- Tombol Ubah Bahasa (Di luar navbar, melayang di paling kanan atas layar) -->
+<div class="fixed top-6 right-6 z-[60] group hidden md:block">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
+  </button>
+  
+  <!-- Dropdown Menu -->
+  <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-primary bg-primary/10 transition-colors">English (EN)</a>
+    <a href="#" class="px-5 py-3 font-label-md text-label-md text-on-surface-variant hover:bg-primary/20 hover:text-primary transition-colors border-t border-outline-variant/10">Bahasa (ID)</a>
+  </div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl flex justify-between items-center z-50 transition-all duration-300" id="main-nav">
+  <!-- Brand Logo -->
+  <a class="flex items-center" href="index.html">
+    <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+  </a>
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex items-center gap-8">
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/50 transition-all duration-500 scale-95 active:scale-90 px-2 py-1 rounded" href="index.html">Home</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-bold border-b border-primary pb-1 scale-95 active:scale-90 transition-transform" href="#">Villa</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/50 transition-all duration-500 scale-95 active:scale-90 px-2 py-1 rounded" href="restaurant.html">Restaurant</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/50 transition-all duration-500 scale-95 active:scale-90 px-2 py-1 rounded" href="yoga.html">Yoga</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/50 transition-all duration-500 scale-95 active:scale-90 px-2 py-1 rounded" href="experience.html">Experience</a>
+    <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/50 transition-all duration-500 scale-95 active:scale-90 px-2 py-1 rounded" href="mybookings.html">MyBookings</a>
+  </nav>
+  <!-- Trailing Action -->
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90">
+    <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
+      <span class="material-symbols-outlined text-[16px]">person</span>
+    </span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
+  </button>
+  <!-- Mobile Menu Toggle -->
+  <button class="md:hidden text-primary">
+    <span class="material-symbols-outlined" data-icon="menu">menu</span>
+  </button>
+</header>
+
+<!-- Main Content -->
+<main class="min-h-screen">
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] md:h-[70vh] w-full flex items-center justify-center pt-24">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img class="w-full h-full object-cover object-center filter brightness-[0.6]" data-alt="A wide, sweeping cinematic photograph of an expansive luxury villa estate nestled in a dark, lush tropical valley." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJKJmwrrcAXvUjz31OZckGq0J05QE9Uhf2wHjKOij6YADegWdtLbpJBNG-sH7muzJrNdEfHnPSqJxzE25uX122cSD4oVyncEXJ7LxmTxm8KT-1Ar6Y6Wbdnxp3Zu1zlO18PjvjT0QV__cPbkofLBwxYDH_0RD1VK6eUiBryGrglE0Zql9XeVYlAd8vFnLVrQI33jlPJBBv9f60BTahPCYD-ImGrbFAV9q82d8JQ5nUze4JppiJh_k">
+      <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+    </div>
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center gap-6 mt-16">
+      <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/90">Accommodations</p>
+      <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary tracking-tight">Find your sanctuary.</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Private villas designed for slow mornings, deep reflection, and an intimate connection with the earth.</p>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex justify-center">
+    <div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar w-full justify-start md:justify-center">
+      <button class="px-6 py-2 rounded-full border border-primary text-primary font-label-md text-label-md whitespace-nowrap bg-primary-container/20 transition-colors">All Villas</button>
+      <button class="px-6 py-2 rounded-full border border-outline-variant/60 text-on-surface-variant font-label-md text-label-md hover:border-primary hover:text-primary hover:bg-primary-container/10 transition-colors whitespace-nowrap">1 Bedroom</button>
+      <button class="px-6 py-2 rounded-full border border-outline-variant/60 text-on-surface-variant font-label-md text-label-md hover:border-primary hover:text-primary hover:bg-primary-container/10 transition-colors whitespace-nowrap">2 Bedrooms</button>
+      <button class="px-6 py-2 rounded-full border border-outline-variant/60 text-on-surface-variant font-label-md text-label-md hover:border-primary hover:text-primary hover:bg-primary-container/10 transition-colors whitespace-nowrap">3+ Bedrooms</button>
+      <button class="px-6 py-2 rounded-full border border-outline-variant/60 text-on-surface-variant font-label-md text-label-md hover:border-primary hover:text-primary hover:bg-primary-container/10 transition-colors whitespace-nowrap">Ocean View</button>
+      <button class="px-6 py-2 rounded-full border border-outline-variant/60 text-on-surface-variant font-label-md text-label-md hover:border-primary hover:text-primary hover:bg-primary-container/10 transition-colors whitespace-nowrap">Jungle View</button>
+    </div>
+  </section>
+
+  <!-- Villa Grid -->
+  <section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full mb-section-gap">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      
+      <!-- Villa 1: The Garden Villa -->
+      <article class="md:col-span-8 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-[600px] border border-outline-variant/20 bg-surface-container-low">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDftnuepPIgCy0ElCEPT3LyWhuFBaKSIUmdks6QlaElj10eR-U4yMBQT6qbaW8oicTU3t2pbPwbEOKwwD47dUpIjCG7zONURK1YKSB0pmB6QJIF7N1ycZ3svhSeU61KUpcjMKmpl8cxFBtK_2KtNAddJHPcKIEVDyw87f8-OEp3-Vab2d4XzALL9lC4oP7o9wSTyxm6KlpNkJjzCBnHblHU73hrZxlNVpH3DKbqLXl2eKqHwDMZODI">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">bed</span> 1 Bed</span>
+            <span>•</span>
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">group</span> Up to 2 Guests</span>
+            <span>•</span>
+            <span>Jungle View</span>
+          </div>
+          
+          <div class="flex flex-col">
+            <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Garden Villa</h2>
+            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 hidden md:grid">
+              <div class="overflow-hidden">
+                <p class="font-body-md text-on-surface-variant max-w-xl pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">An intimate hideaway featuring a private plunge pool, open-air bath, and direct access to our permaculture gardens. Designed for deep restorative rest.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $850 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center group-hover:translate-x-2 transition-transform">Explore Villa <span class="material-symbols-outlined ml-1">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 2: The Cliff Villa -->
+      <article class="md:col-span-4 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-[600px] border border-outline-variant/20 bg-surface-container-low">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCvtq6138SNN2EQrBFkHsreTqxgqOXbhm8I6R8QwJ6aWGzGkbompQn5v5v70hXvoBzCjRn6Yfyx_iceIJqvBDIKHZHL1tq8G9dHyME0GKDlCRdqffQJupRR1zWXOR6lDTXeAaYxU0Bxswpfu7cIJtJF6uvi7rP502rMaVlVZgFRKVuWEYfe1GGCaxigLSQhFhoZUIwir3VgSAxw7308ItqeWg_42JILcGjuN1P284BsKV66k_8uXM">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span>2 Bed</span>
+            <span>•</span>
+            <span>Ocean View</span>
+          </div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">The Cliff Villa</h2>
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $1,200 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 3: The Oceanfront Suite -->
+      <article class="md:col-span-4 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-[600px] border border-outline-variant/20 bg-surface-container-low mt-8 md:mt-0">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7h8eR0xJd2jG0z0j1GfD0yR1xGf1D2j2x1_GfD0yR1xGf1D2j2x1_GfD0yR1xGf1D2j2x1_GfD0yR1xGf1D2j2x1_GfD0yR1xGf1D2j2x1_GfD0yR1xGf1D2j2x1" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA_gSYVxoUttvAZNGM73SC4pPmm3Xvah-Rl2VDix3xmXFbLMlxpsLhjNqTINrgtp-xFEeaEbNHRPFYHIn9AkycJmOVlqgU2xFIzAHqz3_6Qc3BnNmrby-t0F0PF3WQ0g_v2lD74zBva2oebutuJbo7a84uiz0PsL3GR_AI9AelRXu9FDoRZmE7BrXVqjaDPeU5jzwhcKCP8yJEoKF2K9ZZ666qAsOeK9B3pN6y43JJFU3vIyAnDZg4';">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span>1 Bed</span>
+            <span>•</span>
+            <span>Beachfront</span>
+          </div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">Oceanfront Suite</h2>
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $950 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 4: The Canopy Pavilion -->
+      <article class="md:col-span-8 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] md:h-[600px] border border-outline-variant/20 bg-surface-container-low mt-8 md:mt-0">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjIFY_WhPZowR3ppwD_qwUN6ARyyc0j9m1Emrw-pUUTooypvfa0S1FbMtJiVUVPcaWOQaflidOdXsLG-cnsbLcIowHljbvPp6s3p6X2iknoPy0EAbZPWExf-k3sj3TnWSpOIr5hh5xNQYvzqwLTzQfuXJ3i8qD3KxRS4WPRXJ35WiSiPm8DgpKuob7dRGi_12c66Zq_C_OFmVJa9W5ocGLbX62C3geVochaQv0fFrQE3ONAFsTlGU">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-4">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">bed</span> 2 Bed</span>
+            <span>•</span>
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">group</span> Up to 4 Guests</span>
+            <span>•</span>
+            <span>Jungle Canopy</span>
+          </div>
+          
+          <div class="flex flex-col">
+            <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Canopy Pavilion</h2>
+            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 hidden md:grid">
+              <div class="overflow-hidden">
+                <p class="font-body-md text-on-surface-variant max-w-xl pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Elevated among the ancient trees, this two-bedroom pavilion offers wrap-around decks, suspended nets, and sweeping views of the valley below.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $1,400 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center group-hover:translate-x-2 transition-transform">Explore Villa <span class="material-symbols-outlined ml-1">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 5: The Wellness Retreat -->
+      <article class="md:col-span-6 group relative rounded-xl overflow-hidden cursor-pointer h-[400px] border border-outline-variant/20 bg-surface-container-low mt-8">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxP-JBU_5auwR-FA4tJ_sOOH2gUjKs77XlfKFmAFv_7FHj9b3GuwTTAXMlHhg240Odme9YzoM461ih_BtwMe4gIaaW6RE3ALv9I-VjEkqjlrwthkrSs4lL9JAl6NumUwJA408ymhno-KrQZMDOGZYtHP_oW88ffhXFYN65eA4YVTX7wa8qKnSVtxe5S6xwjQGlc6mSYuZdE8OHMMt037wIalgf-Mr3aaf9u3qODbuo6vqsPkfm350">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-3">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span>1 Bed</span>
+            <span>•</span>
+            <span>Private Spa</span>
+          </div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">The Wellness Retreat</h2>
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $1,050 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 6: The River House -->
+      <article class="md:col-span-6 group relative rounded-xl overflow-hidden cursor-pointer h-[400px] border border-outline-variant/20 bg-surface-container-low mt-8">
+        <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_gSYVxoUttvAZNGM73SC4pPmm3Xvah-Rl2VDix3xmXFbLMlxpsLhjNqTINrgtp-xFEeaEbNHRPFYHIn9AkycJmOVlqgU2xFIzAHqz3_6Qc3BnNmrby-t0F0PF3WQ0g_v2lD74zBva2oebutuJbo7a84uiz0PsL3GR_AI9AelRXu9FDoRZmE7BrXVqjaDPeU5jzwhcKCP8yJEoKF2K9ZZ666qAsOeK9B3pN6y43JJFU3vIyAnDZg4">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-8 w-full flex flex-col gap-3">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span>2 Bed</span>
+            <span>•</span>
+            <span>Riverfront</span>
+          </div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">The River House</h2>
+          <div class="flex justify-between items-end">
+            <span class="font-body-md text-body-md text-on-surface-variant">From $1,150 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Villa 7: The Residence -->
+      <article class="md:col-span-12 group relative rounded-xl overflow-hidden cursor-pointer h-[500px] border border-outline-variant/20 bg-surface-container-low mt-8">
+        <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJKJmwrrcAXvUjz31OZckGq0J05QE9Uhf2wHjKOij6YADegWdtLbpJBNG-sH7muzJrNdEfHnPSqJxzE25uX122cSD4oVyncEXJ7LxmTxm8KT-1Ar6Y6Wbdnxp3Zu1zlO18PjvjT0QV__cPbkofLBwxYDH_0RD1VK6eUiBryGrglE0Zql9XeVYlAd8vFnLVrQI33jlPJBBv9f60BTahPCYD-ImGrbFAV9q82d8JQ5nUze4JppiJh_k">
+        <div class="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent"></div>
+        <div class="absolute top-1/2 -translate-y-1/2 left-0 p-8 md:p-16 max-w-2xl flex flex-col gap-6">
+          <div class="flex items-center gap-4 text-secondary font-label-caps text-label-caps tracking-widest uppercase">
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">bed</span> 3 Bed</span>
+            <span>•</span>
+            <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">group</span> Up to 6 Guests</span>
+            <span>•</span>
+            <span>Ultimate Privacy</span>
+          </div>
+          <h2 class="font-display-md text-display-md text-on-surface">The Residence</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant hidden md:block">Our most expansive offering, featuring a private spa pavilion, dedicated staff, infinity pool, and unparalleled panoramic views of the entire valley.</p>
+          <div class="flex items-center gap-6 mt-4">
+            <span class="font-body-lg text-body-lg text-on-surface">From $2,800 / night</span>
+            <span class="font-label-md text-label-md text-secondary flex items-center group-hover:translate-x-2 transition-transform">Explore Estate <span class="material-symbols-outlined ml-1">arrow_forward</span></span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Amenities/Features List Section -->
+  <section class="py-16 border-t border-outline-variant/20 bg-surface-dim">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-3xl text-primary">pool</span>
+                <h4 class="font-label-md text-on-surface uppercase tracking-widest">Private Pools</h4>
+                <p class="font-body-sm text-on-surface-variant text-sm">In every villa</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-3xl text-primary">room_service</span>
+                <h4 class="font-label-md text-on-surface uppercase tracking-widest">In-Villa Dining</h4>
+                <p class="font-body-sm text-on-surface-variant text-sm">24/7 service</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-3xl text-primary">spa</span>
+                <h4 class="font-label-md text-on-surface uppercase tracking-widest">Wellness</h4>
+                <p class="font-body-sm text-on-surface-variant text-sm">Organic spa treatments</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+                <span class="material-symbols-outlined text-3xl text-primary">concierge</span>
+                <h4 class="font-label-md text-on-surface uppercase tracking-widest">Butler Service</h4>
+                <p class="font-body-sm text-on-surface-variant text-sm">Dedicated assistance</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full min-h-[60vh] flex flex-col justify-end p-margin-mobile md:p-margin-desktop bg-surface-dim border-t border-outline-variant/20">
+  <div class="flex flex-col gap-section-gap w-full max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+      <!-- Brand Logo -->
+      <div class="flex flex-col items-start gap-3">
+        <img alt="ONDA" class="h-10 md:h-14 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQ3J37Ki9lkRdt8Ry_t75x-ImYbRwpofOFaUrifmILcMUZjmmrP0lDONpVF0yNSu6vmuEXDC-1Oy-K0629mYa5s_haUfl_hkCpNBoOQj4i4aEXKtOcHQeGHKOfENU6NxTDgYQn6Tibvejw01-VI_J7iKRE8GnHqCy-jiy8jJuWo1kyqMVyvXIUuD4oPrykMaBDOcFI3o3nJCyMvHSNwq9fUYPt4y-TpEy6XfgoOedYO0qnJPTitY">
+      </div>
+      <!-- Links -->
+      <nav class="flex flex-col md:flex-row gap-8 md:gap-16 font-body-md text-body-md">
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100 transition-opacity" href="#">Whatsapp</a>
+        <a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 opacity-80 hover:opacity-100 transition-opacity" href="#">Instagram</a>
+      </nav>
+    </div>
+    <!-- Copyright -->
+    <div class="font-body-md text-body-md text-on-surface-variant pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div class="flex items-center gap-2 font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant opacity-80">
+        <span class="material-symbols-outlined text-[16px]">public</span>
+        <span>EN / ID (LOMBOK, ID)</span>
+      </div>
+      <div>© 2026 ONDA Resorts. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) {
+            nav.classList.add('bg-surface-container/90', 'border-outline-variant/50');
+            nav.classList.remove('bg-surface-container/60', 'border-outline-variant/30');
+        } else {
+            nav.classList.add('bg-surface-container/60', 'border-outline-variant/30');
+            nav.classList.remove('bg-surface-container/90', 'border-outline-variant/50');
+        }
+    });
+</script>
+
+</body>
+</html>
