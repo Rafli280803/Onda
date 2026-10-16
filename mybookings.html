@@ -295,8 +295,8 @@
 </head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary font-body-md text-body-md">
 
-<!-- Tombol Ubah Bahasa (Melayang di pojok kanan atas) -->
-<div class="fixed top-6 right-6 z-[60] group">
+<!-- Tombol Ubah Bahasa (Hanya tampil di Desktop di pojok kanan atas) -->
+<div class="hidden md:block fixed top-6 right-6 z-[60] group">
   <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
     <span class="material-symbols-outlined text-[20px]">language</span>
     <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
@@ -329,7 +329,7 @@
   </button>
 </header>
 
-<!-- Mobile Navigation Bar (Staggered Menu Overlay) -->
+<!-- Mobile Navigation Bar -->
 <div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
   <header class="staggered-menu-header">
     <a class="sm-logo" href="index.html">
@@ -356,9 +356,20 @@
         <li><a class="sm-panel-item" href="yoga.html">Yoga</a></li>
         <li><a class="sm-panel-item" href="experience.html">Experience</a></li>
         <li><a class="sm-panel-item" href="mybookings.html" style="color: #c5caa8;">MyBookings</a></li>
-        <li><a class="sm-panel-item" href="#" style="color: #c5caa8;">Sign In</a></li>
+        <!-- Sign In ditempatkan di paling bawah menu navigasi mobile -->
+        <li><a class="sm-panel-item" href="#" style="color: #c5caa8; font-size: 1.25rem; margin-top: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span class="material-symbols-outlined text-[20px]">person</span> Sign In</a></li>
       </ul>
     </div>
+    
+    <!-- Dropdown Bahasa di bagian paling bawah panel mobile -->
+    <div class="pt-6 pb-2 border-t border-outline-variant/30 flex flex-col gap-2">
+      <span class="sm-panel-title">Language / Bahasa</span>
+      <div class="flex items-center gap-3">
+        <a href="#" class="px-4 py-2 rounded-lg bg-primary/20 text-primary font-label-caps text-label-caps uppercase tracking-wider text-xs">EN (English)</a>
+        <a href="#" class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-primary font-label-caps text-label-caps uppercase tracking-wider text-xs transition-colors">ID (Bahasa)</a>
+      </div>
+    </div>
+
     <div class="sm-socials">
       <h4 class="sm-socials-title">Connect</h4>
       <ul class="sm-socials-list">
