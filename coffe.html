@@ -127,15 +127,192 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .text-glow { text-shadow: 0 0 20px rgba(238, 219, 192, 0.15); }
         .soft-gradient-overlay { background: linear-gradient(to top, rgba(19, 20, 16, 1) 0%, rgba(19, 20, 16, 0.4) 50%, rgba(19, 20, 16, 0.1) 100%); }
+
+        /* --- Staggered Menu CSS Implementation (Mobile) --- */
+        .staggered-menu-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 40;
+          pointer-events: none;
+        }
+        .staggered-menu-wrapper.fixed-wrapper {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: 40;
+          overflow: hidden;
+        }
+        .staggered-menu-header {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1.25em 1.5em;
+          background: transparent;
+          pointer-events: none;
+          z-index: 20;
+        }
+        .staggered-menu-header > * {
+          pointer-events: auto;
+        }
+        .sm-logo {
+          display: flex;
+          align-items: center;
+          user-select: none;
+        }
+        .sm-logo img {
+          height: 24px;
+          width: auto;
+          filter: brightness(0) invert(1);
+          opacity: 0.95;
+        }
+        .sm-toggle {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background: rgba(30, 33, 19, 0.85);
+          border: 1px solid rgba(197, 202, 168, 0.2);
+          padding: 0.5rem 1rem;
+          border-radius: 50px;
+          cursor: pointer;
+          color: #e2e4ce;
+          font-weight: 500;
+          line-height: 1;
+          backdrop-filter: blur(8px);
+        }
+        .sm-toggle-textWrap {
+          position: relative;
+          display: inline-block;
+          height: 1em;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .sm-icon {
+          position: relative;
+          width: 16px;
+          height: 12px;
+          display: inline-flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        .sm-icon-line {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: currentColor;
+          border-radius: 2px;
+          transition: transform 0.3s ease;
+        }
+        .staggered-menu-panel {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(18, 21, 8, 0.96);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          display: flex;
+          flex-direction: column;
+          padding: 5em 2em 2em 2em;
+          overflow-y: auto;
+          z-index: 10;
+          pointer-events: auto;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .staggered-menu-wrapper[data-open] .staggered-menu-panel {
+          opacity: 1;
+          visibility: visible;
+        }
+        .sm-panel-inner {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .sm-panel-title {
+          margin: 0;
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: #c5caa8;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+        .sm-panel-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+        .sm-panel-item {
+          position: relative;
+          color: #e2e4ce;
+          font-weight: 400;
+          font-size: 1.75rem;
+          cursor: pointer;
+          line-height: 1.2;
+          font-family: "Noto Serif", serif;
+          font-style: italic;
+          text-decoration: none;
+          display: inline-block;
+          transition: color 0.25s;
+        }
+        .sm-panel-item:hover {
+          color: #c5caa8;
+        }
+        .sm-socials {
+          margin-top: auto;
+          padding-top: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .sm-socials-title {
+          margin: 0;
+          font-size: 0.8rem;
+          font-weight: 500;
+          color: #c5caa8;
+        }
+        .sm-socials-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
+        .sm-socials-link {
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: #e2e4ce;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+        .sm-socials-link:hover {
+          color: #c5caa8;
+        }
 </style>
 </head>
 <body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
 
-<!-- Tombol Ubah Bahasa (Melayang di pojok kanan atas) -->
-<div class="fixed top-6 right-6 z-[60] group">
-  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
-    <span class="material-symbols-outlined text-[20px]">language</span>
-    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
+<!-- Tombol Ubah Bahasa (Posisi responsif: top-20 di mobile agar tidak menutupi tombol menu, top-6 di desktop) -->
+<div class="fixed top-20 md:top-6 right-6 z-[60] group">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3.5 rounded-full bg-surface-container/85 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[18px] md:text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs md:text-sm">EN</span>
   </button>
   
   <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
@@ -144,8 +321,8 @@
   </div>
 </div>
 
-<!-- Top Navigation Bar -->
-<header class="fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl flex justify-between items-center z-50 transition-all duration-300" id="main-nav">
+<!-- Top Navigation Bar (Desktop) -->
+<header class="hidden md:flex fixed top-6 left-1/2 -translate-x-1/2 rounded-full px-8 py-3.5 w-[90%] max-w-5xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/30 shadow-2xl justify-between items-center z-50 transition-all duration-300" id="main-nav">
   <a class="flex items-center" href="index.html">
     <img alt="ONDA" class="h-6 md:h-7 w-auto object-contain brightness-0 invert opacity-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
   </a>
@@ -157,23 +334,61 @@
     <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="experience.html">Experience</a>
     <a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 hover:bg-surface-variant/55 px-2 py-1 rounded scale-95 active:scale-90 transition-transform" href="mybookings.html">MyBookings</a>
   </nav>
-  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90">
+  <button aria-label="Account login" class="hidden md:flex items-center gap-2.5 px-4 py-2 rounded-full border border-outline-variant/60 bg-surface-container/60 hover:border-primary text-secondary hover:text-on-surface transition-all duration-300 scale-95 active:scale-90 cursor-pointer">
     <span class="w-6 h-6 rounded-full bg-primary-container/40 flex items-center justify-center text-primary">
       <span class="material-symbols-outlined text-[16px]">person</span>
     </span>
     <span class="font-label-caps text-label-caps tracking-widest uppercase">Sign In</span>
   </button>
-  <button class="md:hidden text-primary">
-    <span class="material-symbols-outlined" data-icon="menu">menu</span>
-  </button>
 </header>
+
+<!-- Mobile Navigation Bar (Staggered Menu Overlay) -->
+<div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
+  <header class="staggered-menu-header">
+    <a class="sm-logo" href="index.html">
+      <img alt="ONDA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
+    </a>
+    <button class="sm-toggle" id="smToggleBtn" aria-label="Toggle Menu">
+      <span class="sm-toggle-textWrap">
+        <span class="sm-toggle-textInner" id="smToggleText">Menu</span>
+      </span>
+      <span class="sm-icon">
+        <span class="sm-icon-line" id="line1"></span>
+        <span class="sm-icon-line" id="line2"></span>
+      </span>
+    </button>
+  </header>
+
+  <div class="staggered-menu-panel" id="smPanel">
+    <div class="sm-panel-inner">
+      <h3 class="sm-panel-title">Navigation</h3>
+      <ul class="sm-panel-list">
+        <li><a class="sm-panel-item" href="index.html">Home</a></li>
+        <li><a class="sm-panel-item" href="villa.html">Villa</a></li>
+        <li><a class="sm-panel-item" href="restaurant.html" style="color: #c5caa8;">Restaurant</a></li>
+        <li><a class="sm-panel-item" href="yoga.html">Yoga</a></li>
+        <li><a class="sm-panel-item" href="experience.html">Experience</a></li>
+        <li><a class="sm-panel-item" href="mybookings.html">MyBookings</a></li>
+        <li><a class="sm-panel-item" href="#" style="color: #c5caa8;">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="sm-socials">
+      <h4 class="sm-socials-title">Connect</h4>
+      <ul class="sm-socials-list">
+        <li><a class="sm-socials-link" href="#">Instagram</a></li>
+        <li><a class="sm-socials-link" href="#">WhatsApp</a></li>
+        <li><a class="sm-socials-link" href="#">Email</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <!-- Main Content -->
 <main class="min-h-screen">
   <!-- Hero Section Coffee -->
   <section class="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img class="w-full h-full object-cover filter brightness-[0.55]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq8GkADb0JgzSALNFM5XK3nQ8P1ExhnXAW3ayzmZLCSoKmiy05acB12xwTcinqz9KJp8j4hIjciO6e3z__KBu8ZNJgLJRoJ7QIaLpaMa1ecbaO3rP_aHcmTmS5r2jK7xppNA4Vy79QWFvGVKYsnZ7sQBYPdvQXa_JYKz12XdzQ4ZlsaMPffsjKoLU3ylol8uiSgza20vfrxUNUzm3o-lq_0xbcfEMj3sYXDdVG62nrZUqcd4EGBbM83Q"/>
+      <img class="w-full h-full object-cover filter brightness-[0.55]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq8GkADb0JgzSALNFM5XK3nQ8P1ExhnXAW3ayzmZLCSoKmiy05acB12xwTcinqz9KJp8j4hIjciO6e3z__KBu8ZNJgLJRoJ7QIaLpaMa1ecbaO3rP_aHcmTmS5r2jK7xppNA4Vy79QWFvGVKYsnZ7sQBYPdvQXa_JYKz12XdzQ4ZlsaMPffsjKoLU3ylol8uiSgza20vfrxUNUzm3o-lq_0xbcfEMj3sYXDdVG62nrZUqcd4EGBbM83Q">
       <div class="absolute inset-0 soft-gradient-overlay mix-blend-multiply"></div>
     </div>
     <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop flex flex-col items-center mt-12">
@@ -364,6 +579,46 @@
             }
         }
     });
+
+    // Staggered Menu Interactivity (Mobile)
+    const smToggleBtn = document.getElementById('smToggleBtn');
+    const staggeredMenu = document.getElementById('staggeredMenu');
+    const smToggleText = document.getElementById('smToggleText');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    let menuOpen = false;
+
+    if(smToggleBtn && staggeredMenu) {
+        smToggleBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                staggeredMenu.setAttribute('data-open', 'true');
+                staggeredMenu.classList.add('fixed-wrapper');
+                smToggleText.textContent = 'Close';
+                line1.style.transform = 'translateY(5px) rotate(45deg)';
+                line2.style.transform = 'translateY(-5px) rotate(-45deg)';
+            } else {
+                staggeredMenu.removeAttribute('data-open');
+                staggeredMenu.classList.remove('fixed-wrapper');
+                smToggleText.textContent = 'Menu';
+                line1.style.transform = 'none';
+                line2.style.transform = 'none';
+            }
+        });
+
+        // Close menu on selecting item
+        const mobileLinks = document.querySelectorAll('.sm-panel-item');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                staggeredMenu.removeAttribute('data-open');
+                staggeredMenu.classList.remove('fixed-wrapper');
+                smToggleText.textContent = 'Menu';
+                line1.style.transform = 'none';
+                line2.style.transform = 'none';
+            });
+        });
+    }
 </script>
 </body>
 </html>
