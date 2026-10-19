@@ -8,8 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<!-- Memuat font Plus Jakarta Sans -->
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
 <script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
@@ -79,22 +78,20 @@
           "unit": "8px"
         },
         "fontFamily": {
-          // Semua font diatur menjadi Plus Jakarta Sans
-          "display-hero-mobile": ["'Plus Jakarta Sans'", "sans-serif"],
-          "label-md": ["'Plus Jakarta Sans'", "sans-serif"],
-          "headline-lg": ["'Plus Jakarta Sans'", "sans-serif"],
-          "display-hero": ["'Plus Jakarta Sans'", "sans-serif"],
-          "headline-md": ["'Plus Jakarta Sans'", "sans-serif"],
-          "body-md": ["'Plus Jakarta Sans'", "sans-serif"],
-          "body-lg": ["'Plus Jakarta Sans'", "sans-serif"],
-          "headline-sm": ["'Plus Jakarta Sans'", "sans-serif"],
-          "label-caps": ["'Plus Jakarta Sans'", "sans-serif"],
-          "headline-lg-mobile": ["'Plus Jakarta Sans'", "sans-serif"],
-          "body-sm": ["'Plus Jakarta Sans'", "sans-serif"],
-          "title-md": ["'Plus Jakarta Sans'", "sans-serif"],
-          "display-md": ["'Plus Jakarta Sans'", "sans-serif"],
-          "display-lg": ["'Plus Jakarta Sans'", "sans-serif"],
-          "sans": ["'Plus Jakarta Sans'", "sans-serif"]
+          "display-hero-mobile": ["Noto Serif", "serif"],
+          "label-md": ["Noto Serif", "serif"],
+          "headline-lg": ["Noto Serif", "serif"],
+          "display-hero": ["Noto Serif", "serif"],
+          "headline-md": ["Noto Serif", "serif"],
+          "body-md": ["Noto Serif", "serif"],
+          "body-lg": ["Noto Serif", "serif"],
+          "headline-sm": ["Noto Serif", "serif"],
+          "label-caps": ["Noto Serif", "serif"],
+          "headline-lg-mobile": ["Noto Serif", "serif"],
+          "body-sm": ["Noto Serif", "serif"],
+          "title-md": ["Noto Serif", "serif"],
+          "display-md": ["Noto Serif", "serif"],
+          "display-lg": ["Noto Serif", "serif"]
         },
         "fontSize": {
           "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
@@ -120,10 +117,8 @@
         .material-symbols-outlined[data-weight="fill"] {
           font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        
-        /* Memaksa semua elemen menggunakan Plus Jakarta Sans */
-        html, body, * { font-family: 'Plus Jakarta Sans', sans-serif !important; }
-        
+        html { scroll-behavior: smooth; font-family: 'Noto Serif', serif; }
+        body { font-family: 'Noto Serif', serif; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #121508; }
         ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
@@ -156,9 +151,9 @@
           top: 0;
           left: 0;
           width: 100%;
-          display: flex;
+          display: grid;
+          grid-template-columns: 1fr auto 1fr; /* Membagi header jadi 3 kolom agar logo presisi di tengah */
           align-items: center;
-          justify-content: space-between;
           padding: 1.25em 1.5em;
           background: transparent;
           pointer-events: none;
@@ -168,17 +163,21 @@
           pointer-events: auto;
         }
         .sm-logo {
+          grid-column: 2; /* Menaruh logo di kolom tengah */
+          justify-self: center;
           display: flex;
           align-items: center;
           user-select: none;
         }
         .sm-logo img {
-          height: 24px;
+          height: 48px; /* Ukuran logo diperbesar (sebelumnya 24px/36px) */
           width: auto;
           filter: brightness(0) invert(1);
           opacity: 0.95;
         }
         .sm-toggle {
+          grid-column: 3; /* Menaruh tombol menu di kolom kanan */
+          justify-self: flex-end; /* Memastikan tombol menempel di kanan */
           position: relative;
           display: inline-flex;
           align-items: center;
@@ -192,6 +191,7 @@
           font-weight: 500;
           line-height: 1;
           backdrop-filter: blur(8px);
+          font-family: 'Noto Serif', serif;
         }
         .sm-toggle-textWrap {
           position: relative;
@@ -234,6 +234,7 @@
           opacity: 0;
           visibility: hidden;
           transition: opacity 0.3s ease, visibility 0.3s ease;
+          font-family: 'Noto Serif', serif;
         }
         .staggered-menu-wrapper[data-open] .staggered-menu-panel {
           opacity: 1;
@@ -252,6 +253,7 @@
           color: #c5caa8;
           text-transform: uppercase;
           letter-spacing: 2px;
+          font-family: 'Noto Serif', serif;
         }
         .sm-panel-list {
           list-style: none;
@@ -268,6 +270,8 @@
           font-size: 1.75rem;
           cursor: pointer;
           line-height: 1.2;
+          font-family: "Noto Serif", serif;
+          font-style: italic;
           text-decoration: none;
           display: inline-block;
           transition: color 0.25s;
@@ -287,6 +291,7 @@
           font-size: 0.8rem;
           font-weight: 500;
           color: #c5caa8;
+          font-family: 'Noto Serif', serif;
         }
         .sm-socials-list {
           list-style: none;
@@ -304,6 +309,7 @@
           color: #e2e4ce;
           text-decoration: none;
           transition: color 0.3s ease;
+          font-family: 'Noto Serif', serif;
         }
         .sm-socials-link:hover {
           color: #c5caa8;
@@ -350,7 +356,8 @@
 <div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
   <header class="staggered-menu-header">
     <a class="sm-logo" href="#">
-      <img alt="ONDA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M" style="height: 36px; width: auto;">
+      <!-- Inline style dihilangkan, ukuran kini diatur di CSS .sm-logo img -->
+      <img alt="ONDA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpQpzSHhBvmej3lgpcCeKlPSUDtRy1QXlJUzzd5B0PXH2YBCEWKZNmM56GJPYIO4liTaLVChnmxRj_Yf0coV07aTY84TwO86I5edWwr158XlmF1a_X9C3QD1Q_XWRE2apYV6y1nV-FGnN87vCV1_GgySiMyqlobW7ceNhnu9jSj7Olg0URc8lzQiBpV4dQlRR4DnEcU8G9rXHCqe8itu59k_QG-NMD7NiqPEGgOuQc4DMMuEHPq_M">
     </a>
     <button class="sm-toggle" id="smToggleBtn" aria-label="Toggle Menu">
       <span class="sm-toggle-textWrap">
@@ -407,7 +414,9 @@
     </div>
     <div class="relative z-10 w-full max-w-container-max mx-auto flex flex-col items-center text-center gap-8 pb-16">
       <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/90 gsap-reveal">A Private Tropical Retreat</p>
-      <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface max-w-4xl gsap-reveal font-medium">Stay somewhere worth remembering.</h1>
+      
+      <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface max-w-4xl gsap-reveal">Stay somewhere worth remembering.</h1>
+      
       <p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant gsap-reveal">Discover a sanctuary where architectural harmony meets the raw beauty of nature. A place designed for slowing down.</p>
       <a class="mt-4 bg-primary text-on-primary font-semibold px-8 py-4 rounded-md font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary-container hover:text-on-surface transition-colors duration-300 shadow-md gsap-reveal" href="villa.html">Explore Villas</a>
     </div>
@@ -417,7 +426,7 @@
   <section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-dim">
     <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
       <div class="md:col-span-5 flex flex-col gap-8 gsap-reveal">
-        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface tracking-tight font-medium">More than a stay.<br>A slower way of living.</h2>
+        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface tracking-tight">More than a stay.<br>A slower way of living.</h2>
         <p class="font-body-lg text-body-lg text-on-surface-variant">Immerse yourself in spaces crafted to foster stillness. Our retreats are intentionally designed to blur the boundaries between indoor comfort and the wild, untamed beauty of the Lombok landscape.</p>
         <a class="inline-flex items-center gap-2 text-primary font-label-caps text-label-caps tracking-widest uppercase border-b border-primary/40 pb-1 self-start hover:border-primary transition-colors" href="#">
           Discover Our Philosophy
@@ -437,7 +446,7 @@
     <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 gsap-reveal">
       <div>
         <p class="font-label-caps text-label-caps tracking-widest uppercase text-primary/80 mb-2">Accommodations</p>
-        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface font-medium">Featured Sanctuaries</h2>
+        <h2 class="font-display-md text-headline-lg-mobile md:text-display-md text-on-surface">Featured Sanctuaries</h2>
       </div>
       <a href="villa.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all duration-300">
         View All Villas <span class="material-symbols-outlined text-sm">arrow_forward</span>
@@ -456,7 +465,7 @@
               <span>•</span>
               <span><span class="material-symbols-outlined text-[16px] align-middle mr-1">group</span> Up to 2 Guests</span>
             </div>
-            <h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-medium">The Garden Villa</h3>
+            <h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">The Garden Villa</h3>
             <div class="flex justify-between items-end">
               <span class="font-body-md text-body-md text-on-surface-variant">From $850 / night</span>
               <span class="font-label-md text-label-md text-secondary flex items-center group-hover:translate-x-2 transition-transform">Explore Villa <span class="material-symbols-outlined ml-1">arrow_forward</span></span>
@@ -475,7 +484,7 @@
             <span>•</span>
             <span>Ocean View</span>
           </div>
-          <h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">The Cliff Villa</h3>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface">The Cliff Villa</h3>
           <div class="flex justify-between items-end">
             <span class="font-body-md text-body-md text-on-surface-variant">From $1,200</span>
             <a href="villa.html" class="font-label-md text-label-md text-secondary flex items-center opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined">arrow_forward</span></a>
