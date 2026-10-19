@@ -8,7 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;1,7..72,300&family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Memuat font Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script id="tailwind-config">
     tailwind.config = {
         darkMode: "class",
@@ -78,15 +79,19 @@
                     "unit": "8px"
                 },
                 "fontFamily": {
-                    "label-md": ["Plus Jakarta Sans", "Inter", "sans-serif"],
-                    "label-caps": ["Plus Jakarta Sans", "Inter", "sans-serif"],
-                    "display-md": ["Noto Serif", "Literata", "serif"],
-                    "headline-sm": ["Noto Serif", "Literata", "serif"],
-                    "body-lg": ["Plus Jakarta Sans", "Inter", "sans-serif"],
-                    "display-lg": ["Noto Serif", "Literata", "serif"],
-                    "headline-lg-mobile": ["Noto Serif", "Literata", "serif"],
-                    "headline-lg": ["Noto Serif", "Literata", "serif"],
-                    "body-md": ["Plus Jakarta Sans", "Inter", "sans-serif"]
+                    // Semua font diatur menjadi Plus Jakarta Sans
+                    "label-md": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "label-caps": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "display-md": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "headline-sm": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "body-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "display-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "headline-lg-mobile": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "headline-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "body-md": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "title-md": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "body-sm": ["'Plus Jakarta Sans'", "sans-serif"],
+                    "sans": ["'Plus Jakarta Sans'", "sans-serif"]
                 },
                 "fontSize": {
                     "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
@@ -112,6 +117,10 @@
     .material-symbols-outlined[data-weight="fill"] {
       font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
+    
+    /* Memaksa semua elemen menggunakan Plus Jakarta Sans */
+    html, body, * { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+    
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #121508; }
     ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
@@ -157,7 +166,7 @@
       user-select: none;
     }
     .sm-logo img {
-      height: 24px;
+      height: 36px;
       width: auto;
       filter: brightness(0) invert(1);
       opacity: 0.95;
@@ -252,8 +261,6 @@
       font-size: 1.75rem;
       cursor: pointer;
       line-height: 1.2;
-      font-family: "Noto Serif", serif;
-      font-style: italic;
       text-decoration: none;
       display: inline-block;
       transition: color 0.25s;
@@ -298,11 +305,11 @@
 </head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary font-body-md text-body-md">
 
-<!-- Tombol Ubah Bahasa (Posisi responsif: top-20 di mobile agar tidak menutupi tombol menu, top-6 di desktop) -->
-<div class="fixed top-20 md:top-6 right-6 z-[60] group">
-  <button aria-label="Change Language" class="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3.5 rounded-full bg-surface-container/85 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
-    <span class="material-symbols-outlined text-[18px] md:text-[20px]">language</span>
-    <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs md:text-sm">EN</span>
+<!-- Tombol Ubah Bahasa (Hanya tampil di Desktop) -->
+<div class="fixed top-6 right-6 z-[60] group hidden md:block">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
   </button>
   
   <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
@@ -332,7 +339,7 @@
   </button>
 </header>
 
-<!-- Mobile Navigation Bar (Staggered Menu Overlay) -->
+<!-- Mobile Navigation Bar (Staggered Menu Overlay dengan Pilihan Bahasa) -->
 <div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
   <header class="staggered-menu-header">
     <a class="sm-logo" href="index.html">
@@ -362,6 +369,16 @@
         <li><a class="sm-panel-item" href="#" style="color: #c5caa8;">Sign In</a></li>
       </ul>
     </div>
+    
+    <!-- Bagian Ganti Bahasa di dalam Menu Mobile -->
+    <div class="py-4 border-t border-outline-variant/20 mt-4">
+      <h4 class="sm-socials-title mb-2">Language / Bahasa</h4>
+      <div class="flex gap-4">
+        <a href="#" class="text-primary font-label-md text-label-md uppercase px-3 py-1.5 rounded bg-primary/10 border border-primary/30">English (EN)</a>
+        <a href="#" class="text-on-surface-variant font-label-md text-label-md uppercase px-3 py-1.5 rounded bg-surface-container/60 border border-outline-variant/30">Bahasa (ID)</a>
+      </div>
+    </div>
+
     <div class="sm-socials">
       <h4 class="sm-socials-title">Connect</h4>
       <ul class="sm-socials-list">
@@ -391,9 +408,9 @@
 <!-- Editorial Headline & Narrative Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
 <div class="lg:col-span-8">
-<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-[1.1] text-balance">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-[1.1] text-balance font-medium">
     Moments Crafted <br class="hidden sm:inline">
-<span class="italic font-light text-secondary">for the Senses</span>
+<span class="font-medium text-secondary">for the Senses</span>
 </h1>
 </div>
 <div class="lg:col-span-4 lg:pb-2">
@@ -457,7 +474,7 @@
 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Ocean Sanctuary</span>
 <span class="font-label-caps text-label-caps text-on-surface-variant/80">3 Hours • Gerupuk</span>
 </div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight mb-5">Private Sunrise Surf Coaching &amp; Gerupuk Reef Safari</h2>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight mb-5 font-medium">Private Sunrise Surf Coaching &amp; Gerupuk Reef Safari</h2>
 <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed mb-8">Guided by our resident Sasak watermen, navigate untouched morning southern swells via traditional wooden outrigger boats, accompanied by 4K water cinematography, ocean swell telemetry, and a shoreline recovery breakfast.</p>
 <div class="space-y-3.5 mb-10">
 <div class="flex items-center gap-3 text-on-surface">
@@ -502,7 +519,7 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
 <div>
 <span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] block mb-2">The Sanctuary Roster</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Immersive Encounters</h2>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium">Immersive Encounters</h2>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light">
     Each journey is orchestrated with intimate groups of four guests or fewer, ensuring unhurried contemplation and individualized attention.
@@ -520,7 +537,7 @@
 <div class="p-8 flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Mind &amp; Frequency</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Sacred Sound Healing &amp; Twilight Yoga</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug font-medium">Sacred Sound Healing &amp; Twilight Yoga</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Multi-harmonic Tibetan singing bowls and restorative asana sequenced along ocean breezes of southern Lombok, accompanied by native herbal elixirs.</p>
 </div>
 <div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
@@ -547,7 +564,7 @@
 <div class="p-8 flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Gastronomic Craft</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Sasak Farm-to-Table Bamboo Cooking Masterclass</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug font-medium">Sasak Farm-to-Table Bamboo Cooking Masterclass</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Forage rare heirloom Sasak botanicals with our Executive Chef. Craft stone-ground sambal beberuk and wood-fired aromatic Lombok delicacies.</p>
 </div>
 <div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
@@ -574,7 +591,7 @@
 <div class="p-8 flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Maritime Journey</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Tanjung Aan &amp; Pink Beach Catamaran Sailing</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug font-medium">Tanjung Aan &amp; Pink Beach Catamaran Sailing</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Skim past untouched coastal cliffs of southern Lombok. Drop anchor in crystal turquoise bays for guided sea turtle encounters.</p>
 </div>
 <div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
@@ -601,7 +618,7 @@
 <div class="p-8 flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Spiritual Cleansing</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Sade Heritage &amp; Traditional Weaving Walk</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug font-medium">Sade Heritage &amp; Traditional Weaving Walk</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Immerse in centuries of Sasak culture at Sade village. Discover exquisite handloom songket and ikat artistry, guided by elder village artisans.</p>
 </div>
 <div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
@@ -628,7 +645,7 @@
 <div class="p-8 flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Astral &amp; Flame</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Merese Hill Sunset &amp; Stargazing Fire Ritual</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug font-medium">Merese Hill Sunset &amp; Stargazing Fire Ritual</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">A private twilight gathering atop iconic Bukit Merese overlooking Kuta Bay, gathered around fragrant volcanic fire pits beneath the southern milky way.</p>
 </div>
 <div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">
@@ -655,7 +672,7 @@
 <div class="p-8 flex flex-col flex-1 justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Ecological Immersion</span>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug">Benang Kelambu Waterfall &amp; Rainforest Trek</h3>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 leading-snug font-medium">Benang Kelambu Waterfall &amp; Rainforest Trek</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed mb-6">Journey to Central Lombok's enchanting curtain waterfalls and lush tropical slopes, discovering endemic flora and mountain springs.</p>
 </div>
 <div class="pt-5 border-t border-outline-variant/30 flex items-center justify-between">

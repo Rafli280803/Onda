@@ -8,7 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Memuat font Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
@@ -78,20 +79,22 @@
           "unit": "8px"
         },
         "fontFamily": {
-          "display-hero-mobile": ["Noto Serif"],
-          "label-md": ["Plus Jakarta Sans"],
-          "headline-lg": ["Noto Serif"],
-          "display-hero": ["Noto Serif"],
-          "headline-md": ["Noto Serif"],
-          "body-md": ["Plus Jakarta Sans"],
-          "body-lg": ["Plus Jakarta Sans"],
-          "headline-sm": ["Noto Serif"],
-          "label-caps": ["Plus Jakarta Sans"],
-          "headline-lg-mobile": ["Noto Serif"],
-          "body-sm": ["Plus Jakarta Sans"],
-          "title-md": ["Plus Jakarta Sans"],
-          "display-md": ["Noto Serif"],
-          "display-lg": ["Noto Serif"]
+          // Semua font diatur menjadi Plus Jakarta Sans
+          "display-hero-mobile": ["'Plus Jakarta Sans'", "sans-serif"],
+          "label-md": ["'Plus Jakarta Sans'", "sans-serif"],
+          "headline-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+          "display-hero": ["'Plus Jakarta Sans'", "sans-serif"],
+          "headline-md": ["'Plus Jakarta Sans'", "sans-serif"],
+          "body-md": ["'Plus Jakarta Sans'", "sans-serif"],
+          "body-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+          "headline-sm": ["'Plus Jakarta Sans'", "sans-serif"],
+          "label-caps": ["'Plus Jakarta Sans'", "sans-serif"],
+          "headline-lg-mobile": ["'Plus Jakarta Sans'", "sans-serif"],
+          "body-sm": ["'Plus Jakarta Sans'", "sans-serif"],
+          "title-md": ["'Plus Jakarta Sans'", "sans-serif"],
+          "display-md": ["'Plus Jakarta Sans'", "sans-serif"],
+          "display-lg": ["'Plus Jakarta Sans'", "sans-serif"],
+          "sans": ["'Plus Jakarta Sans'", "sans-serif"]
         },
         "fontSize": {
           "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }],
@@ -117,7 +120,10 @@
         .material-symbols-outlined[data-weight="fill"] {
           font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        html { scroll-behavior: smooth; }
+        
+        /* Memaksa semua elemen menggunakan Plus Jakarta Sans */
+        html, body, * { font-family: 'Plus Jakarta Sans', sans-serif !important; }
+        
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #121508; }
         ::-webkit-scrollbar-thumb { background: #333627; border-radius: 4px; }
@@ -167,7 +173,7 @@
           user-select: none;
         }
         .sm-logo img {
-          height: 24px;
+          height: 36px;
           width: auto;
           filter: brightness(0) invert(1);
           opacity: 0.95;
@@ -262,8 +268,6 @@
           font-size: 1.75rem;
           cursor: pointer;
           line-height: 1.2;
-          font-family: "Noto Serif", serif;
-          font-style: italic;
           text-decoration: none;
           display: inline-block;
           transition: color 0.25s;
@@ -308,11 +312,11 @@
 </head>
 <body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
 
-<!-- Tombol Ubah Bahasa (Posisi responsif: top-20 di mobile agar tidak menutupi tombol menu, top-6 di desktop) -->
-<div class="fixed top-20 md:top-6 right-6 z-[60] group">
-  <button aria-label="Change Language" class="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3.5 rounded-full bg-surface-container/85 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
-    <span class="material-symbols-outlined text-[18px] md:text-[20px]">language</span>
-    <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs md:text-sm">EN</span>
+<!-- Tombol Ubah Bahasa (Hanya tampil di Desktop) -->
+<div class="fixed top-6 right-6 z-[60] group hidden md:block">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
   </button>
   
   <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
@@ -342,7 +346,7 @@
   </button>
 </header>
 
-<!-- Mobile Navigation Bar (Staggered Menu Overlay) -->
+<!-- Mobile Navigation Bar (Staggered Menu Overlay dengan Pilihan Bahasa) -->
 <div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
   <header class="staggered-menu-header">
     <a class="sm-logo" href="index.html">
@@ -372,6 +376,16 @@
         <li><a class="sm-panel-item" href="#" style="color: #c5caa8;">Sign In</a></li>
       </ul>
     </div>
+    
+    <!-- Bagian Ganti Bahasa di dalam Menu Mobile -->
+    <div class="py-4 border-t border-outline-variant/20 mt-4">
+      <h4 class="sm-socials-title mb-2">Language / Bahasa</h4>
+      <div class="flex gap-4">
+        <a href="#" class="text-primary font-label-md text-label-md uppercase px-3 py-1.5 rounded bg-primary/10 border border-primary/30">English (EN)</a>
+        <a href="#" class="text-on-surface-variant font-label-md text-label-md uppercase px-3 py-1.5 rounded bg-surface-container/60 border border-outline-variant/30">Bahasa (ID)</a>
+      </div>
+    </div>
+
     <div class="sm-socials">
       <h4 class="sm-socials-title">Connect</h4>
       <ul class="sm-socials-list">
@@ -396,7 +410,7 @@
         <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Restaurant
       </a>
       <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] mb-3 block uppercase border border-primary/30 px-4 py-1.5 rounded-full bg-surface/20 backdrop-blur-sm gsap-reveal">07:00 - 11:00</span>
-      <h1 class="font-display-lg text-3xl sm:text-5xl md:text-display-lg text-primary max-w-4xl mx-auto leading-tight text-glow gsap-reveal">
+      <h1 class="font-display-lg text-3xl sm:text-5xl md:text-display-lg text-primary max-w-4xl mx-auto leading-tight text-glow gsap-reveal font-medium">
         The Morning Awakening
       </h1>
       <p class="font-body-lg text-sm sm:text-base md:text-body-lg text-on-surface-variant mt-4 max-w-2xl mx-auto font-light gsap-reveal">
@@ -409,7 +423,7 @@
   <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
     <div class="text-center mb-16 gsap-reveal">
       <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-2 block">Morning Selections</span>
-      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface">Breakfast Menu Catalogue</h2>
+      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface font-medium">Breakfast Menu Catalogue</h2>
       <div class="w-16 h-px bg-primary/30 mx-auto mt-4"></div>
     </div>
 
@@ -422,8 +436,8 @@
         <div class="p-6 flex flex-col justify-between flex-grow">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-headline-sm text-on-surface text-lg">Tropical Sunrise Acai Bowl</h3>
-              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$14</span>
+              <h3 class="font-headline-sm text-on-surface text-lg font-medium">Tropical Sunrise Acai Bowl</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2 font-medium">$14</span>
             </div>
             <p class="font-body-md text-sm text-on-surface-variant">Blended dragon fruit and organic acai, topped with homemade coconut granola, fresh mango chunks, and chia seeds.</p>
           </div>
@@ -438,8 +452,8 @@
         <div class="p-6 flex flex-col justify-between flex-grow">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-headline-sm text-on-surface text-lg">Balinese Heritage Avocado Toast</h3>
-              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$16</span>
+              <h3 class="font-headline-sm text-on-surface text-lg font-medium">Balinese Heritage Avocado Toast</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2 font-medium">$16</span>
             </div>
             <p class="font-body-md text-sm text-on-surface-variant">Sourdough toast with smashed local avocado, poached free-range eggs, dukkah spice, and micro-herbs from our garden.</p>
           </div>
@@ -454,8 +468,8 @@
         <div class="p-6 flex flex-col justify-between flex-grow">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-headline-sm text-on-surface text-lg">Golden Turmeric Porridge</h3>
-              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$12</span>
+              <h3 class="font-headline-sm text-on-surface text-lg font-medium">Golden Turmeric Porridge</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2 font-medium">$12</span>
             </div>
             <p class="font-body-md text-sm text-on-surface-variant">Heirloom red rice slow-cooked in coconut milk with fresh turmeric, ginger, palm sugar, and caramelized bananas.</p>
           </div>
@@ -470,8 +484,8 @@
         <div class="p-6 flex flex-col justify-between flex-grow">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-headline-sm text-on-surface text-lg">Onda Signature Egg Benedict</h3>
-              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$18</span>
+              <h3 class="font-headline-sm text-on-surface text-lg font-medium">Onda Signature Egg Benedict</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2 font-medium">$18</span>
             </div>
             <p class="font-body-md text-sm text-on-surface-variant">Crispy potato rosti, house-smoked local marlin, poached organic eggs, and lemongrass hollandaise sauce.</p>
           </div>
@@ -486,8 +500,8 @@
         <div class="p-6 flex flex-col justify-between flex-grow">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-headline-sm text-on-surface text-lg">Pandan Coconut Pancakes</h3>
-              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$13</span>
+              <h3 class="font-headline-sm text-on-surface text-lg font-medium">Pandan Coconut Pancakes</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2 font-medium">$13</span>
             </div>
             <p class="font-body-md text-sm text-on-surface-variant">Fluffy green pandan-infused pancakes layered with palm sugar coconut caramel and fresh papaya ribbons.</p>
           </div>
@@ -502,8 +516,8 @@
         <div class="p-6 flex flex-col justify-between flex-grow">
           <div>
             <div class="flex justify-between items-baseline mb-2">
-              <h3 class="font-headline-sm text-on-surface text-lg">Traditional Jamu & Elixirs</h3>
-              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2">$8</span>
+              <h3 class="font-headline-sm text-on-surface text-lg font-medium">Traditional Jamu & Elixirs</h3>
+              <span class="text-secondary font-headline-sm text-lg whitespace-nowrap ml-2 font-medium">$8</span>
             </div>
             <p class="font-body-md text-sm text-on-surface-variant">Freshly brewed traditional Javanese turmeric-ginger root tonic or cold-pressed green island juice.</p>
           </div>
@@ -516,7 +530,7 @@
   <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
     <div class="bg-surface-container-low rounded-[28px] border border-outline-variant/20 p-8 sm:p-12 md:p-24 text-center relative overflow-hidden gsap-reveal">
       <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at center, #eedbc0 1px, transparent 1px); background-size: 24px 24px;"></div>
-      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface mb-4 md:mb-6 relative z-10">Start your morning slow.</h2>
+      <h2 class="font-display-md text-2xl sm:text-3xl md:text-display-md text-on-surface mb-4 md:mb-6 relative z-10 font-medium">Start your morning slow.</h2>
       <p class="font-body-lg text-sm sm:text-base md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8 md:mb-10 relative z-10">
         Complimentary for all villa residents. Outside guests are warmly welcomed to reserve a morning table.
       </p>

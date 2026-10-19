@@ -154,7 +154,7 @@
           user-select: none;
         }
         .sm-logo img {
-          height: 24px;
+          height: 36px;
           width: auto;
           filter: brightness(0) invert(1);
           opacity: 0.95;
@@ -295,11 +295,11 @@
 </head>
 <body class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary font-body-md text-body-md">
 
-<!-- Tombol Ubah Bahasa (Posisi responsif: top-20 di mobile agar tidak menutupi navbar, top-6 di desktop) -->
-<div class="fixed top-20 md:top-6 right-6 z-[60] group">
-  <button aria-label="Change Language" class="flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3.5 rounded-full bg-surface-container/85 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
-    <span class="material-symbols-outlined text-[18px] md:text-[20px]">language</span>
-    <span class="font-label-caps text-label-caps tracking-widest uppercase text-xs md:text-sm">EN</span>
+<!-- Tombol Ubah Bahasa (Hanya tampil di Desktop) -->
+<div class="fixed top-6 right-6 z-[60] group hidden md:block">
+  <button aria-label="Change Language" class="flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface-container/80 backdrop-blur-xl border border-outline-variant/30 text-on-surface-variant hover:text-primary hover:border-primary shadow-2xl transition-all cursor-pointer">
+    <span class="material-symbols-outlined text-[20px]">language</span>
+    <span class="font-label-caps text-label-caps tracking-widest uppercase text-sm">EN</span>
   </button>
   
   <div class="absolute top-full right-0 mt-3 hidden group-hover:flex flex-col bg-surface-container/95 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl min-w-[150px]">
@@ -329,7 +329,7 @@
   </button>
 </header>
 
-<!-- Mobile Navigation Bar -->
+<!-- Mobile Navigation Bar (Staggered Menu Overlay dengan Pilihan Bahasa) -->
 <div class="md:hidden staggered-menu-wrapper" id="staggeredMenu">
   <header class="staggered-menu-header">
     <a class="sm-logo" href="index.html">
@@ -359,6 +359,16 @@
         <li><a class="sm-panel-item" href="#" style="color: #c5caa8;">Sign In</a></li>
       </ul>
     </div>
+    
+    <!-- Bagian Ganti Bahasa di dalam Menu Mobile -->
+    <div class="py-4 border-t border-outline-variant/20 mt-4">
+      <h4 class="sm-socials-title mb-2">Language / Bahasa</h4>
+      <div class="flex gap-4">
+        <a href="#" class="text-primary font-label-md text-label-md uppercase px-3 py-1.5 rounded bg-primary/10 border border-primary/30">English (EN)</a>
+        <a href="#" class="text-on-surface-variant font-label-md text-label-md uppercase px-3 py-1.5 rounded bg-surface-container/60 border border-outline-variant/30">Bahasa (ID)</a>
+      </div>
+    </div>
+
     <div class="sm-socials">
       <h4 class="sm-socials-title">Connect</h4>
       <ul class="sm-socials-list">
